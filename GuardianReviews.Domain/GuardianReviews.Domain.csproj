@@ -43,6 +43,7 @@
     <Compile Include="Enumerations\MusicTypes.cs" />
     <Compile Include="Enumerations\ReviewTypes.cs" />
     <Compile Include="Enumerations\StarRatings.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="MusicReview.cs" />
     <Compile Include="Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

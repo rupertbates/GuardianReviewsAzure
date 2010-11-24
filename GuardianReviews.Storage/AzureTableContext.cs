@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Guardian.Configuration;
+using GuardianReviews.Domain;
+using GuardianReviews.Domain.Enumerations;
+using GuardianReviews.Storage.TableEntities;
 
 namespace GuardianReviews.Storage
 {
@@ -16,8 +19,8 @@ namespace GuardianReviews.Storage
     
     public class AzureTableContext : TableServiceContext
     {
-        private const string _menu = "Menu";
         private static readonly CloudStorageAccount _account;
+
         #region Constructors
         static AzureTableContext()
         {
@@ -38,36 +41,29 @@ namespace GuardianReviews.Storage
 
         public static void CreateTables()
         {
-            CloudTableClient.CreateTablesFromModel(typeof(AzureTableContext), _account.TableEndpoint.ToString(), _account.Credentials);
+            var client = _account.CreateCloudTableClient();
+            client.CreateTableIfNotExist(typeof(ReviewEntity).Name);
 
         }
-        public IQueryable<MenuItemRow> Menu
+        public static void DeleteTables()
+        {
+            var client = _account.CreateCloudTableClient();
+            foreach (var table in client.ListTables())
+            {
+                client.DeleteTable(table);
+            }
+        }
+        public CloudTableQuery<ReviewEntity> Reviews
         {
             get
             {
-                return CreateQuery<MenuItemRow>(_menu).AsTableServiceQuery();
+                return CreateQuery<ReviewEntity>(typeof(ReviewEntity).Name).AsTableServiceQuery();
             }
         }
-        //TODO: doesn't really work investigate using attributes to work out the tablename
-        private void AddEntity<T>(T entity)
+        public void AddEntity<T>(T entity)
         {
             AddObject(typeof(T).Name, entity);
         }
-        public void AddToMenus(MenuItemRow menu)
-        {
-            AddObject(_menu, menu);
-        }
     }
-
-    [EntityPropertyMapping("Name", SyndicationItemProperty.Title, SyndicationTextContentKind.Plaintext, true)]
-    public class MenuItemRow :  TableServiceEntity
-    {
-        public MenuItemRow():base(Guid.NewGuid().ToString(), "")
-        {
-        }
-
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime CreatedOn { get; set; }
-    }
+   
 }
