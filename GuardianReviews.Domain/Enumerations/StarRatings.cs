@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GuardianReviews.Domain.Enumerations
 {
-    public enum StarRatings
+    public enum StarRatings : int
     {
         Zero, One, Two, Three, Four, Five
     }

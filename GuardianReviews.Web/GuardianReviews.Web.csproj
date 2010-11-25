@@ -125,6 +125,14 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GuardianReviews.Data\GuardianReviews.Data.csproj">
+      <Project>{1616D530-8B63-4996-A4BF-E3087DC2372B}</Project>
+      <Name>GuardianReviews.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
+      <Project>{588B4672-6EC9-405E-81EF-410FD24D4D82}</Project>
+      <Name>GuardianReviews.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Storage\GuardianReviews.Storage.csproj">
       <Project>{57E507EF-10AE-4A02-BC45-D1FB64441E2F}</Project>
       <Name>GuardianReviews.Storage</Name>

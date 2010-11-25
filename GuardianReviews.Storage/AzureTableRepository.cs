@@ -7,7 +7,7 @@ namespace GuardianReviews.Storage
 {
     public class AzureTableRepository<T> : IRepository<T>
     {
-        public List<T> Select()
+        public List<T> Select(Func<T, bool> predicate)
         {
             throw new NotImplementedException();
         }

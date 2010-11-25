@@ -42,7 +42,7 @@ namespace GuardianReviews.Storage
         public static void CreateTables()
         {
             var client = _account.CreateCloudTableClient();
-            client.CreateTableIfNotExist(typeof(ReviewEntity).Name);
+            client.CreateTableIfNotExist(typeof(Review).Name);
 
         }
         public static void DeleteTables()
@@ -53,11 +53,11 @@ namespace GuardianReviews.Storage
                 client.DeleteTable(table);
             }
         }
-        public CloudTableQuery<ReviewEntity> Reviews
+        public CloudTableQuery<Review> Reviews
         {
             get
             {
-                return CreateQuery<ReviewEntity>(typeof(ReviewEntity).Name).AsTableServiceQuery();
+                return CreateQuery<Review>(typeof(Review).Name).AsTableServiceQuery();
             }
         }
         public void AddEntity<T>(T entity)

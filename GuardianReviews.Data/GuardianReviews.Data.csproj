@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57E507EF-10AE-4A02-BC45-D1FB64441E2F}</ProjectGuid>
+    <ProjectGuid>{1616D530-8B63-4996-A4BF-E3087DC2372B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuardianReviews.Storage</RootNamespace>
-    <AssemblyName>GuardianReviews.Storage</AssemblyName>
+    <RootNamespace>GuardianReviews.Data</RootNamespace>
+    <AssemblyName>GuardianReviews.Data</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,16 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guardian.Configuration">
-      <HintPath>..\Binaries\Guardian.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -50,11 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AzureTableContext.cs" />
-    <Compile Include="AzureTableRepository.cs" />
+    <Compile Include="GuardianReviews.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuardianReviews.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuardianReviews.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuardianReviews.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableEntities\BaseEntity.cs" />
-    <Compile Include="TableEntities\ReviewEntity.cs" />
+    <Compile Include="ReviewsRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="GuardianReviews.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GuardianReviews.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="GuardianReviews.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GuardianReviews.Context.cs</LastGenOutput>
+      <CustomToolNamespace>GuardianReviews.Domain</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GuardianReviews.edmx.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
@@ -63,7 +80,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,15 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Services.Common;
 using System.Linq;
 using System.Text;
 using Microsoft.WindowsAzure.StorageClient;
 
 namespace GuardianReviews.Storage.TableEntities
 {
-    public class BaseEntity : TableServiceEntity
+    [DataServiceKey("PartitionKey", "RowKey")]
+    public class BaseEntity
     {
-        public BaseEntity():base(Guid.NewGuid().ToString(), "")
+        public string RowKey { get; set; }
+        public string PartitionKey { get; set; }
+        public BaseEntity():this(Guid.NewGuid().ToString(), "")
         {
+        }
+        public BaseEntity(string rowKey, string partitionKey)
+        {
+            RowKey = rowKey;
+            PartitionKey = partitionKey;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace GuardianReviews.Domain.Interfaces
 {
     public interface IRepository<T>
     {
-        List<T> Select();
+        List<T> Select(Func<T, bool> predicate);
         void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);

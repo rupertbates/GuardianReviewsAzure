@@ -76,6 +76,13 @@
       <Project>{F5199BEF-9300-4B72-9648-2108470244FE}</Project>
       <Name>Guardian.OpenPlatform</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
+      <Project>{588B4672-6EC9-405E-81EF-410FD24D4D82}</Project>
+      <Name>GuardianReviews.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ContentConverters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

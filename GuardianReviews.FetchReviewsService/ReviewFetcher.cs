@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Guardian.OpenPlatform;
+using GuardianReviews.Domain;
+using GuardianReviews.Domain.Interfaces;
 
 namespace GuardianReviews.FetchReviewsService
 {
     class ReviewFetcher
     {
         private readonly OpenPlatformSearch _contentApi;
+        private IRepository<Review> _repository;
 
         public ReviewFetcher(OpenPlatformSearch contentApi)
         {
@@ -17,12 +20,16 @@ namespace GuardianReviews.FetchReviewsService
 
         public void FetchReviews()
         {
+            FetchReviews(DateTime.Today.AddDays(-7)); //anything in the last week
+        }
+        public void FetchReviews(DateTime from)
+        {
             var results = _contentApi.ContentSearch(new ContentSearchParameters
-                                          {
-                                              Tags = new List<string> { "tone/reviews" },  //reviews only
-                                              From = DateTime.Today.AddDays(-7), //anything in the last week
-                                              PageSize = 50
-                                          });
+            {
+                Tags = new List<string> { "tone/reviews" },  //reviews only
+                From = from,
+                PageSize = 50
+            });
         }
     }
 }

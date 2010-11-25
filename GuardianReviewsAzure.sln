@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.FetchReview
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Storage", "GuardianReviews.Storage\GuardianReviews.Storage.csproj", "{57E507EF-10AE-4A02-BC45-D1FB64441E2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Data", "GuardianReviews.Data\GuardianReviews.Data.csproj", "{1616D530-8B63-4996-A4BF-E3087DC2372B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{57E507EF-10AE-4A02-BC45-D1FB64441E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57E507EF-10AE-4A02-BC45-D1FB64441E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57E507EF-10AE-4A02-BC45-D1FB64441E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1616D530-8B63-4996-A4BF-E3087DC2372B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1616D530-8B63-4996-A4BF-E3087DC2372B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1616D530-8B63-4996-A4BF-E3087DC2372B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1616D530-8B63-4996-A4BF-E3087DC2372B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

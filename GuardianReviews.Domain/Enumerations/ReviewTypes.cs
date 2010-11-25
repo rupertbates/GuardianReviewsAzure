@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GuardianReviews.Domain.Enumerations
 {
-    public enum ReviewTypes
+    public enum ReviewTypes : int
     {
         Film, Music, Book, Theatre, Game
     }
