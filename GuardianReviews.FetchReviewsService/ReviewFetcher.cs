@@ -13,9 +13,10 @@ namespace GuardianReviews.FetchReviewsService
         private readonly OpenPlatformSearch _contentApi;
         private IRepository<Review> _repository;
 
-        public ReviewFetcher(OpenPlatformSearch contentApi)
+        public ReviewFetcher(OpenPlatformSearch contentApi, IRepository<Review> repository)
         {
             _contentApi = contentApi;
+            _repository = repository;
         }
 
         public void FetchReviews()
