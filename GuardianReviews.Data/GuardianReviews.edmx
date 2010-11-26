@@ -7,6 +7,16 @@
     <Schema Namespace="GuardianReviews.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="GuardianReviewsStoreContainer">
     <EntitySet Name="Reviews" EntityType="GuardianReviews.Store.Reviews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MusicTypes" EntityType="GuardianReviews.Store.MusicTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReviewMusicType" EntityType="GuardianReviews.Store.ReviewMusicType" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ReviewMusicType_Review" Association="GuardianReviews.Store.FK_ReviewMusicType_Review">
+      <End Role="Review" EntitySet="Reviews" />
+      <End Role="ReviewMusicType" EntitySet="ReviewMusicType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewMusicType_MusicType" Association="GuardianReviews.Store.FK_ReviewMusicType_MusicType">
+      <End Role="MusicType" EntitySet="MusicTypes" />
+      <End Role="ReviewMusicType" EntitySet="ReviewMusicType" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Reviews">
     <Key>
@@ -19,13 +29,57 @@
     <Property Name="StarRating" Type="int" Nullable="true" />
     <Property Name="WebUrl" Type="nchar" Nullable="true" DefaultValue="&quot;&quot;" MaxLength="250" />
   </EntityType>
+  <EntityType Name="MusicTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar(max)" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReviewMusicType">
+    <Key>
+      <PropertyRef Name="Reviews_Id" />
+      <PropertyRef Name="MusicTypes_Id" />
+    </Key>
+    <Property Name="Reviews_Id" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="MusicTypes_Id" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ReviewMusicType_Review">
+    <End Role="Review" Type="GuardianReviews.Store.Reviews" Multiplicity="1" />
+    <End Role="ReviewMusicType" Type="GuardianReviews.Store.ReviewMusicType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Review">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReviewMusicType">
+        <PropertyRef Name="Reviews_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewMusicType_MusicType">
+    <End Role="ReviewMusicType" Type="GuardianReviews.Store.ReviewMusicType" Multiplicity="*" />
+    <End Role="MusicType" Type="GuardianReviews.Store.MusicTypes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="MusicType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReviewMusicType">
+        <PropertyRef Name="MusicTypes_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="GuardianReviews" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="GuardianReviewsContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Reviews" EntityType="GuardianReviews.Review" />
-        </EntityContainer>
+          <EntitySet Name="MusicTypes" EntityType="GuardianReviews.MusicType" />
+          <AssociationSet Name="ReviewMusicType" Association="GuardianReviews.ReviewMusicType">
+            <End Role="Review" EntitySet="Reviews" />
+            <End Role="MusicType" EntitySet="MusicTypes" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="Review">
           <Key>
             <PropertyRef Name="Id" />
@@ -36,8 +90,21 @@
           <Property Type="Int32" Name="ReviewType" Nullable="false" />
           <Property Type="Int32" Name="StarRating" Nullable="true" />
           <Property Type="String" Name="WebUrl" FixedLength="true" MaxLength="250" DefaultValue="&quot;&quot;" Nullable="true" />
+          <NavigationProperty Name="MusicTypes" Relationship="GuardianReviews.ReviewMusicType" FromRole="Review" ToRole="MusicType" />
         </EntityType>
-      </Schema>
+        <EntityType Name="MusicType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <NavigationProperty Name="Reviews" Relationship="GuardianReviews.ReviewMusicType" FromRole="MusicType" ToRole="Review" />
+        </EntityType>
+        <Association Name="ReviewMusicType">
+          <End Type="GuardianReviews.Review" Role="Review" Multiplicity="*" />
+          <End Type="GuardianReviews.MusicType" Role="MusicType" Multiplicity="*" />
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -55,6 +122,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MusicTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(GuardianReviews.MusicType)">
+        <MappingFragment StoreEntitySet="MusicTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ReviewMusicType" TypeName="GuardianReviews.ReviewMusicType" StoreEntitySet="ReviewMusicType">
+      <EndProperty Name="Review">
+        <ScalarProperty Name="Id" ColumnName="Reviews_Id" />
+      </EndProperty>
+      <EndProperty Name="MusicType">
+        <ScalarProperty Name="Id" ColumnName="MusicTypes_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -75,8 +158,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="GuardianReviews" >
-        <EntityTypeShape EntityType="GuardianReviews.Review" Width="1.5" PointX="4.25" PointY="1.25" Height="1.9210009765625" />
-      </Diagram>
+        <EntityTypeShape EntityType="GuardianReviews.Review" Width="1.5" PointX="3.5" PointY="1.5" Height="1.9210009765625" />
+        <EntityTypeShape EntityType="GuardianReviews.MusicType" Width="1.5" PointX="8.75" PointY="1.875" Height="1.2636116536458335" />
+        <AssociationConnector Association="GuardianReviews.ReviewMusicType">
+          <ConnectorPoint PointX="5" PointY="2.5889794921875" />
+          <ConnectorPoint PointX="8.75" PointY="2.5889794921875" />
+        </AssociationConnector>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

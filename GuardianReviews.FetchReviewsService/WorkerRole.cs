@@ -5,8 +5,9 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using Guardian.OpenPlatform;
-using GuardianReviews.Data;
+//using GuardianReviews.NHibernate;
 using GuardianReviews.Domain;
+using GuardianReviews.OpenPlatform;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
@@ -25,7 +26,7 @@ namespace GuardianReviews.FetchReviewsService
             while (true)
             {
                 Thread.Sleep(ConfigurationHelper.GetConfigValue<int>("FetchTimeInSeconds") * 1000);
-                new ReviewFetcher(new OpenPlatformSearch(), new ReviewsRepository(new GuardianReviewsContainer())).FetchReviews();
+                //new ReviewFetcher(new OpenPlatformSearch(), new ReviewsRepository(new GuardianReviewsContainer())).FetchReviews();
             }
         }
 

@@ -57,5 +57,68 @@ namespace GuardianReviews.Domain
         private string _webUrl = "\"\"";
 
         #endregion
+        #region Navigation Properties
+    
+        public virtual ICollection<MusicType> MusicTypes
+        {
+            get
+            {
+                if (_musicTypes == null)
+                {
+                    var newCollection = new FixupCollection<MusicType>();
+                    newCollection.CollectionChanged += FixupMusicTypes;
+                    _musicTypes = newCollection;
+                }
+                return _musicTypes;
+            }
+            set
+            {
+                if (!ReferenceEquals(_musicTypes, value))
+                {
+                    var previousValue = _musicTypes as FixupCollection<MusicType>;
+                    if (previousValue != null)
+                    {
+                        previousValue.CollectionChanged -= FixupMusicTypes;
+                    }
+                    _musicTypes = value;
+                    var newValue = value as FixupCollection<MusicType>;
+                    if (newValue != null)
+                    {
+                        newValue.CollectionChanged += FixupMusicTypes;
+                    }
+                }
+            }
+        }
+        private ICollection<MusicType> _musicTypes;
+
+        #endregion
+        #region Association Fixup
+    
+        private void FixupMusicTypes(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.NewItems != null)
+            {
+                foreach (MusicType item in e.NewItems)
+                {
+                    if (!item.Reviews.Contains(this))
+                    {
+                        item.Reviews.Add(this);
+                    }
+                }
+            }
+    
+            if (e.OldItems != null)
+            {
+                foreach (MusicType item in e.OldItems)
+                {
+                    if (item.Reviews.Contains(this))
+                    {
+                        item.Reviews.Remove(this);
+                    }
+                }
+            }
+        }
+
+        #endregion
     }
 }

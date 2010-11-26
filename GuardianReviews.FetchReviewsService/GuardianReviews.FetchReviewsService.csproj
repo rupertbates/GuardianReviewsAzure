@@ -65,7 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReviewFetcher.cs" />
     <Compile Include="WorkerRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,18 +76,16 @@
       <Project>{F5199BEF-9300-4B72-9648-2108470244FE}</Project>
       <Name>Guardian.OpenPlatform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GuardianReviews.Data\GuardianReviews.Data.csproj">
-      <Project>{1616D530-8B63-4996-A4BF-E3087DC2372B}</Project>
-      <Name>GuardianReviews.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
       <Project>{588B4672-6EC9-405E-81EF-410FD24D4D82}</Project>
       <Name>GuardianReviews.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GuardianReviews.OpenPlatform\GuardianReviews.OpenPlatform.csproj">
+      <Project>{D4FDFFBA-E01E-4090-8694-0DA6AA8D92AA}</Project>
+      <Name>GuardianReviews.OpenPlatform</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ContentConverters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

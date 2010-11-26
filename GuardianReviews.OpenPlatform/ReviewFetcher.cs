@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Guardian.OpenPlatform;
 using GuardianReviews.Domain;
 using GuardianReviews.Domain.Interfaces;
+using GuardianReviews.Domain.Model;
 
-namespace GuardianReviews.FetchReviewsService
+namespace GuardianReviews.OpenPlatform
 {
-    class ReviewFetcher
+    public class ReviewFetcher
     {
         private readonly OpenPlatformSearch _contentApi;
         private IRepository<Review> _repository;
@@ -31,6 +30,7 @@ namespace GuardianReviews.FetchReviewsService
                 From = from,
                 PageSize = 50
             });
+            //_repository.Insert();
         }
     }
 }

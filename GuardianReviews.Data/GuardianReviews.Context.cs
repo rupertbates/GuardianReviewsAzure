@@ -13,7 +13,6 @@ using System.Data.EntityClient;
 
 namespace GuardianReviews.Domain
 {
-
     public partial class GuardianReviewsContainer : ObjectContext
     {
         public const string ConnectionString = "name=GuardianReviewsContainer";
@@ -24,33 +23,36 @@ namespace GuardianReviews.Domain
         public GuardianReviewsContainer()
             : base(ConnectionString, ContainerName)
         {
-            //this.ContextOptions.LazyLoadingEnabled = true;
-            ContextOptions.ProxyCreationEnabled = false;
+            this.ContextOptions.LazyLoadingEnabled = true;
         }
     
         public GuardianReviewsContainer(string connectionString)
             : base(connectionString, ContainerName)
         {
-            //this.ContextOptions.LazyLoadingEnabled = true;
-            ContextOptions.ProxyCreationEnabled = false;
+            this.ContextOptions.LazyLoadingEnabled = true;
         }
     
         public GuardianReviewsContainer(EntityConnection connection)
             : base(connection, ContainerName)
         {
-            //this.ContextOptions.LazyLoadingEnabled = true;
-            ContextOptions.ProxyCreationEnabled = false;
+            this.ContextOptions.LazyLoadingEnabled = true;
         }
     
         #endregion
     
         #region ObjectSet Properties
     
-        public IObjectSet<Review> Reviews
+        public ObjectSet<Review> Reviews
         {
             get { return _reviews  ?? (_reviews = CreateObjectSet<Review>("Reviews")); }
         }
         private ObjectSet<Review> _reviews;
+    
+        public ObjectSet<MusicType> MusicTypes
+        {
+            get { return _musicTypes  ?? (_musicTypes = CreateObjectSet<MusicType>("MusicTypes")); }
+        }
+        private ObjectSet<MusicType> _musicTypes;
 
         #endregion
     }
