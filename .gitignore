@@ -8,6 +8,9 @@
 *.dll.config
 *.cache
 
+# Include dlls if they're in the NuGet packages directory
+!/packages/*/lib/*.dll
+
 # VS Upgrade stuff #
 ####################
 UpgradeLog.XML
