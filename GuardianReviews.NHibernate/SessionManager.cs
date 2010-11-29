@@ -41,9 +41,13 @@ namespace GuardianReviews.NHibernate
             var export = new SchemaExport(_configuration);
             export.Create(false, true);
             var session = GetSession();
-            foreach (MusicTypes m in Enumeration.GetAll<MusicTypes>())
+            foreach (MusicTypes i in Enumeration.GetAll<MusicTypes>())
             {
-                session.Save(m);
+                session.Save(i);
+            }
+            foreach (ReviewTypes i in Enumeration.GetAll<ReviewTypes>())
+            {
+                session.Save(i);
             }
 
         }

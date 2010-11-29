@@ -19,16 +19,12 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
         public static Review AsReview(this Content content)
         {
             Review review = null;
-            var contentType = content.GetReviewType();
-            switch(contentType)
-            {
-                case ReviewTypes.Music:
-                    review = new MusicReview(content.GetMusicTypes());
-                    break;
-                default: //TODO: might get rid of this, if we don't know what type it is we should probably skip it.
-                    review = new Review(contentType);
-                    break;
-            }
+            var reviewType = content.GetReviewType();
+
+            if(reviewType == ReviewTypes.Music)
+                review = new MusicReview(content.GetMusicTypes());
+            else //TODO: might get rid of this, if we don't know what type it is we should probably skip it.    
+                review = new Review(reviewType);
 
             PopulateReview(content, ref review);
             return review;
