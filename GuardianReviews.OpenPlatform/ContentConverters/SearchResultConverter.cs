@@ -23,11 +23,22 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
             switch(contentType)
             {
                 case ReviewTypes.Music:
-                    review = new MusicReview();
-                    ((MusicReview)review).MusicTypes = content.GetMusicTypes();
+                    review = new MusicReview(content.GetMusicTypes());
+                    break;
+                default: //TODO: might get rid of this, if we don't know what type it is we should probably skip it.
+                    review = new Review(contentType);
                     break;
             }
+
+            PopulateReview(content, ref review);
             return review;
+        }
+        private static void PopulateReview(Content content, ref Review review)
+        {
+            review.PublicationDate = content.WebPublicationDate;
+            review.StarRating = content.GetStarRating();
+            review.Title = content.WebTitle;
+            review.WebUrl = content.WebUrl;
         }
     }
 }

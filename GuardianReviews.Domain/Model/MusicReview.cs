@@ -4,10 +4,15 @@ namespace GuardianReviews.Domain.Model
 {
     public class MusicReview : Review
     {
-        public MusicReview()
+        protected MusicReview()
         {
-            MusicTypes = new List<MusicTypes>();
+            ReviewType = ReviewTypes.Music;
         }
-        public virtual IList<MusicTypes> MusicTypes { get; set; }
+        public MusicReview(IList<MusicTypes> types)
+        {
+            ReviewType = ReviewTypes.Music;
+            MusicTypes = types;
+        }
+        public virtual IList<MusicTypes> MusicTypes { get; protected set; }
     }
 }

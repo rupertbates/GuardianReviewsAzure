@@ -41,9 +41,14 @@ namespace GuardianReviews.Tests.OpenPlatform
             var op = new OpenPlatformSearch(new ApiService("Reviews2.json"), "", "");
             var results = op.ContentSearch(new ContentSearchParameters());
             results.Results.Count().ShouldEqual(50);
-            
-            
+
             var content = results.Results
+                .First();
+            content.GetReviewType().ShouldEqual(ReviewTypes.Theatre);
+
+            content.AsReview().ReviewType.ShouldEqual(ReviewTypes.Theatre);
+            
+            content = results.Results
                 .Where(c => c.ApiUrl == "http://content.guardianapis.com/stage/2010/nov/24/the-invisible-man-review").First();
             content.GetReviewType().ShouldEqual(ReviewTypes.Theatre);
             

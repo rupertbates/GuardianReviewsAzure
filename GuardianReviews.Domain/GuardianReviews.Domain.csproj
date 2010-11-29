@@ -44,7 +44,6 @@
     <Compile Include="BaseClasses\Enumeration.cs" />
     <Compile Include="Model\MusicTypes.cs" />
     <Compile Include="Model\ReviewTypes.cs" />
-    <Compile Include="Model\StarRatings.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Model\MusicReview.cs" />
     <Compile Include="Model\Review.cs" />

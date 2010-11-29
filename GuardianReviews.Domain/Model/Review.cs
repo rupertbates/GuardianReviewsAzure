@@ -17,6 +17,14 @@ namespace GuardianReviews.Domain.Model
 {
     public class Review
     {
+        protected Review()
+        {
+            
+        }
+        public Review(ReviewTypes type)
+        {
+            ReviewType = type;
+        }
         public virtual string Id
         {
             get;
@@ -35,9 +43,9 @@ namespace GuardianReviews.Domain.Model
         public virtual ReviewTypes ReviewType
         {
             get;
-            set;
+            protected set;
         }
-        public virtual StarRatings? StarRating
+        public virtual int? StarRating
         {
             get;
             set;
