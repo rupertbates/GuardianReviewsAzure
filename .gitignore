@@ -8,7 +8,8 @@
 *.dll.config
 *.cache
 
-# Include dlls if they're in the NuGet packages directory
+# Include dlls if they're in the binaries or NuGet packages directory
+!/Binaries/*.dll
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
 
