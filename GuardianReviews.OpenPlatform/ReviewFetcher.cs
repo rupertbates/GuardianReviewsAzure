@@ -1,36 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Guardian.Configuration;
 using Guardian.OpenPlatform;
+using Guardian.OpenPlatform.Results.SearchResponses;
 using GuardianReviews.Domain;
 using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.Domain.Model;
+using GuardianReviews.OpenPlatform.ContentConverters;
 
 namespace GuardianReviews.OpenPlatform
 {
     public class ReviewFetcher
     {
         private readonly OpenPlatformSearch _contentApi;
-        private IRepository<Review> _repository;
-
-        public ReviewFetcher(OpenPlatformSearch contentApi, IRepository<Review> repository)
+        private readonly int _apiPageSize = ConfigurationHelper.GetConfigValueOrDefault("ApiPageSize", 50);
+        public ReviewFetcher(OpenPlatformSearch contentApi)
         {
             _contentApi = contentApi;
-            _repository = repository;
         }
+        public IEnumerable<Review> FetchReviews()
+        {
+            return FetchReviews(DateTime.Today.AddDays(-7)); //anything in the last week
+        }
+        public IEnumerable<Review> FetchReviews(DateTime from)
+        {
+            var response = FetchReviews(from, 1);
+            if(response.Pages <= 1)
+                return response.Results.AsReviews().ToList();
 
-        public void FetchReviews()
-        {
-            FetchReviews(DateTime.Today.AddDays(-7)); //anything in the last week
-        }
-        public void FetchReviews(DateTime from)
-        {
-            var results = _contentApi.ContentSearch(new ContentSearchParameters
+            var results = response.Results.AsEnumerable();
+            var numberOfPages = response.Pages;
+            for(int pageIndex = 2;pageIndex <= numberOfPages;pageIndex++)
             {
-                Tags = new List<string> { "tone/reviews" },  //reviews only
+                response = FetchReviews(from, pageIndex);
+                results = results.Concat(response.Results);
+            }
+            return results.AsReviews().ToList();
+        }
+        
+        private ContentSearchResponse FetchReviews(DateTime from, int page)
+        {
+            var response = _contentApi.ContentSearch(new ContentSearchParameters
+            {
+                TagFilter = new List<string> { "tone/reviews" },  //reviews only
+                ShowFields=new List<string>{"all"},
+                ShowTags = new List<string> { "all" },
                 From = from,
-                PageSize = 50
+                PageSize = _apiPageSize,
+                PageIndex = page
+
             });
-            //_repository.Insert();
+            return response;
         }
     }
 }

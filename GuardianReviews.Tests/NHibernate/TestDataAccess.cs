@@ -7,6 +7,7 @@ using Guardian.OpenPlatform.Tests.Fakes;
 using GuardianReviews.Domain;
 using GuardianReviews.Domain.Model;
 using GuardianReviews.NHibernate;
+using GuardianReviews.OpenPlatform;
 using GuardianReviews.OpenPlatform.ContentConverters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Should;
@@ -24,13 +25,32 @@ namespace GuardianReviews.Tests.NHibernate
         }
         [TestMethod]
         [TestCategory("Live DB")]
-        [DeploymentItem(@"OpenPlatform\Reviews2.json")]
-        public void CanInsertContent()
+        [DeploymentItem(@"OpenPlatform\ReviewsWithAllFields.json")]
+        public void Can_insert_Content()
         {
-            var op = new OpenPlatformSearch(new ApiService("Reviews2.json"), "", "");
-            var results = op.ContentSearch(new ContentSearchParameters());
-            results.Results.Count().ShouldEqual(50);
-            var reviews = results.AsReviews();
+            SessionManager.CreateSchema();
+            var op = new OpenPlatformSearch(new ApiService("ReviewsWithAllFields.json"), "", "");
+            
+            var fetcher = new ReviewFetcher(op);
+            var reviews = fetcher.FetchReviews();
+            var repository = new Repository<Review>(SessionManager.GetSession());
+            var nulls = reviews.Where(r => r.ReviewType == null).ToList();
+            repository.SaveMany(reviews);
+
+        }
+        [TestMethod]
+        [TestCategory("Live DB")]
+        [TestCategory("Live API")]
+        public void Can_get_and_insert_live_Content()
+        {
+            SessionManager.CreateSchema();
+            var op = new OpenPlatformSearch();
+
+            var fetcher = new ReviewFetcher(op);
+            var reviews = fetcher.FetchReviews();
+            var repository = new Repository<Review>(SessionManager.GetSession());
+            var nulls = reviews.Where(r => r.ReviewType == null).ToList();
+            repository.SaveMany(reviews);
 
         }
     }

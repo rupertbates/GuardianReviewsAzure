@@ -25,12 +25,17 @@ namespace GuardianReviews.Domain.Model
         {
             ReviewType = type;
         }
-        public virtual string Id
+        public virtual int Id
+        {
+            get;
+            protected set;
+        }
+        public virtual string Title
         {
             get;
             set;
         }
-        public virtual string Title
+        public virtual string Body
         {
             get;
             set;

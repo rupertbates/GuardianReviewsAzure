@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Security.Principal;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
@@ -6,8 +11,6 @@ using GuardianReviews.Web.Models;
 
 namespace GuardianReviews.Web.Controllers
 {
-
-    [HandleError]
     public class AccountController : Controller
     {
 
@@ -39,7 +42,7 @@ namespace GuardianReviews.Web.Controllers
                 if (MembershipService.ValidateUser(model.UserName, model.Password))
                 {
                     FormsService.SignIn(model.UserName, model.RememberMe);
-                    if (!String.IsNullOrEmpty(returnUrl))
+                    if (Url.IsLocalUrl(returnUrl))
                     {
                         return Redirect(returnUrl);
                     }
@@ -75,7 +78,7 @@ namespace GuardianReviews.Web.Controllers
 
         public ActionResult Register()
         {
-            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            ViewModel.PasswordLength = MembershipService.MinPasswordLength;
             return View();
         }
 
@@ -99,7 +102,7 @@ namespace GuardianReviews.Web.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            ViewModel.PasswordLength = MembershipService.MinPasswordLength;
             return View(model);
         }
 
@@ -110,7 +113,7 @@ namespace GuardianReviews.Web.Controllers
         [Authorize]
         public ActionResult ChangePassword()
         {
-            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            ViewModel.PasswordLength = MembershipService.MinPasswordLength;
             return View();
         }
 
@@ -131,7 +134,7 @@ namespace GuardianReviews.Web.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            ViewModel.PasswordLength = MembershipService.MinPasswordLength;
             return View(model);
         }
 

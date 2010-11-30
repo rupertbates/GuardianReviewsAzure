@@ -44,7 +44,7 @@
     </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Web\GuardianReviews.Web.csproj">
       <Name>GuardianReviews.Web</Name>
-      <Project>{7e1bd249-141c-4fdb-a85a-aa1d6531fc5d}</Project>
+      <Project>{cf22651e-ae2d-4cc8-b93a-e1c182c72eca}</Project>
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <RoleName>GuardianReviews.Web</RoleName>

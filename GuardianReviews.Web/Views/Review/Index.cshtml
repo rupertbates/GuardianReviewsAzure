@@ -1,0 +1,21 @@
+﻿@model List<GuardianReviews.Domain.Model.Review>
+@{
+    //View.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<ul>
+@foreach (var review in Model)
+{
+     <li>
+     <h2>@review.Title</h2>
+     <p>
+     
+     </p>
+
+     <em>@review.ReviewType</em>
+     </li>   
+}
+
+</ul>

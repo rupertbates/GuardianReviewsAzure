@@ -64,11 +64,5 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
 
             return section.First().Value;
         }
-        public static int GetStarRating(this Content content)
-        {
-            //TODO: sort this out
-            return 3;
-            //content.Fields.
-        }
     }
 }

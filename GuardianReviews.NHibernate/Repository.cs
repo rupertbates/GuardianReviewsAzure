@@ -1,24 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using GuardianReviews.Domain.Interfaces;
 using NHibernate;
 using NHibernate.Linq;
-namespace KableDirect.Ted.Reports.Database
+
+namespace GuardianReviews.NHibernate
 {
-    public class Repository<T> : IRepository<T> where T : class, new()
+    public class Repository<T> : IRepository<T> where T : class
     {
         private ISession _session;
         public Repository(ISession session)
         {
             _session = session;
         }
-        public IEnumerable<T> SelectAll()
+        public List<T> Select()
         {
             return _session
                 .Linq<T>()
                 .ToList();
         }
+        public List<T> Select(Func<T, bool> predicate)
+        {
+            return _session
+                .Linq<T>()
+                .Where(predicate)
+                .ToList();
+        }
+        //public List<TResult> Select(Expression<Func<T>)
+
         public void Save(T entity)
         {
             _session.Save(entity);
@@ -31,6 +41,10 @@ namespace KableDirect.Ted.Reports.Database
                 _session.SaveOrUpdate(entity);
             }
             _session.Flush();
+        }
+        public void Delete(T entity)
+        {
+            _session.Delete(entity);
         }
     }
 }
