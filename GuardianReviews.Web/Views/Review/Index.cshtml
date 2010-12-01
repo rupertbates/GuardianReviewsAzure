@@ -1,0 +1,22 @@
+@model List<GuardianReviews.Domain.Model.Review>
+@{
+    //View.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Reviews</h2>
+<ul>
+@foreach (var review in Model)
+{
+     <li>
+     <h2>@review.Title</h2>
+     @review.PublicationDate.ToLongDateString()
+     <p>
+     
+     </p>
+     <a href='@review.WebUrl'>Original article</a>
+     <em>@review.ReviewType</em>
+     </li>   
+}
+
+</ul>

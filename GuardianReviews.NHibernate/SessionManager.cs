@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
@@ -18,10 +18,10 @@ namespace GuardianReviews.NHibernate
         private static Configuration _configuration;
         static SessionManager()
         {
-            var cfg = new ReviewsConfiguration();
+            var cfg = new AutomappingConfiguration();
             var mappings = AutoMap.AssemblyOf<Review>(cfg)
                 .Conventions.Add(ForeignKey.Format((m, t) => t.Name + "Id"))
-                .UseOverridesFromAssemblyOf<MusicReviewOverride>();
+                .UseOverridesFromAssemblyOf<ReviewOverride>();
 
             _factory = Fluently.Configure()
               .Database(MsSqlConfiguration.MsSql2008.ShowSql()

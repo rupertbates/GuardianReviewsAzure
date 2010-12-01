@@ -1,0 +1,906 @@
+{
+  "response":{
+    "status":"ok",
+    "userTier":"partner",
+    "total":64626,
+    "startIndex":1,
+    "pageSize":10,
+    "currentPage":1,
+    "pages":5,
+    "orderBy":"newest",
+    "results":[{
+      "id":"tv-and-radio/2010/nov/30/dispatches-kids-britain-doesnt-want-review",
+      "sectionId":"tv-and-radio",
+      "sectionName":"Television &amp; radio",
+      "webPublicationDate":"2010-11-30T08:00:12Z",
+      "webTitle":"TV review: Dispatches: The Kids Britain Doesn't Want | Panorama: Fifa's Dirty Secrets | Ian Hislop's Age of the Do-Gooders",
+      "webUrl":"http://www.guardian.co.uk/tv-and-radio/2010/nov/30/dispatches-kids-britain-doesnt-want-review",
+      "apiUrl":"http://content.guardianapis.com/tv-and-radio/2010/nov/30/dispatches-kids-britain-doesnt-want-review",
+      "fields":{
+        "headline":"TV review: Dispatches: The Kids Britain Doesn't Want | Panorama: Fifa's Dirty Secrets | Ian Hislop's Age of the Do-Gooders",
+        "trailText":"'Guilty until proved guilty' \u2013 so young asylum seekers are still held behind razor wire, writes <strong>John Crace</strong>",
+        "body":"<p>It hasn't been the greatest of weeks for Nick Clegg. And <a href=\"http://www.channel4.com/programmes/dispatches/episode-guide/series-77/episode-1\" title=\"Dispatches: The Kids Britain Doesn't Want\"><strong>Dispatches: The Kids Britain Doesn't Want</strong></a> (Channel 4) won't have done anything to improve his feelings of self-worth. It opened with footage of Clegg speaking in parliament \u2013 back in the days before the election when he still had principles he believed in \u2013 about asylum seekers under 18 being banged up in UK detention centres. \"If the Liberal Democrats get in,\" he said, \"the practice will stop immediately.\"</p><p>Cut to the present day and more than 100 children have been detained since May. Dispatches met three of them. Ten-year-old Mehrshad, whose family is too frightened to return to Iran after a copy of The Satanic Verses was found among his late father's possessions; 16-year-old Mohibullah, who was smuggled out of Afghanistan after the Taliban launched a grenade attack at his family because his father ran a prison for the Brits in Kabul; and 18-year-old Mary who came to Britain two years ago after her father was killed and she was raped in front of her mother by opposition  enforcers in Uganda.</p><p>The stress of both being detained \u2013 from the outside, Yarl's Wood looks every bit as secure and scary as Wandsworth nick \u2013 and the fear that you could be picked up and detained at any time, was evident. But what was just as shocking was seeing that the UK Border Agency clearly works on the assumption of guilty until proved guilty. So  Mehrshad's teddy was slit open in a search for passports and left disembowelled in his bedroom; documentary  evidence from the British ambassador in Afghanistan supporting Mohibullah was ignored; Mary was deported despite clear medical evidence of her ordeal.</p><p>You don't have to be a bleeding heart liberal to find this offensive. Yes, we all know there are asylum seekers who abuse the system and will tell any number of porkies to stay in the country. But the simple truth is that a civilised society doesn't treat kids like this, even if \u2013 as these three clearly weren't \u2013 they are lying. End of.</p><p>Andrew Jennings has been a thorn in Fifa's side for more than a decade and in <a href=\"http://www.bbc.co.uk/programmes/b00wfl8t\" title=\"Panorama: Fifa's Dirty Secrets\"><strong>Panorama: Fifa's Dirty Secrets</strong></a> (BBC1) he once more laid bare the corruption at the heart of football's governing body. And how. Quite apart from exposing three of the 22 \u2013 reduced from 24 after the Sunday Times fingered two others \u2013 Fifa executive members who will be voting on the World Cup bids this Thursday of taking hundreds of  millions of dollars in bribes, he nailed another for twice scamming black  market tickets. His biggest catch though, was Fifa president Sepp Blatter, whom he implicated in covering up  a bribe paid to former Fifa president Joao Havelange.</p><p>This was investigative journalism of the highest quality and we should be thanking Panorama for running it. Instead politicians and the FA have been <a href=\"http://www.guardian.co.uk/media/greenslade/2010/nov/22/fifa-sundaytimes\" title=\"trying to kick it into touch on the grounds it is against the national interest\">trying to kick it into touch on the grounds it is against the national interest</a>. In other words, Fifa might get angry and not give us the 2018 World Cup. Diddums. I guess we're already in it up to our necks thanks to the government having signed up to a secret deal to grant Fifa tax exemption and to reframe employment laws, but if the big society is all about ignoring inconvenient corruption. then count me out.</p><p>Stirrings of a rather more civilised society were on view in <a href=\"http://www.bbc.co.uk/programmes/b00wkmh4\" title=\"Ian Hislop's Age of the Do-Gooders\"><strong>Ian Hislop's Age of the Do-Gooders</strong></a> (BBC2). Hislop is turning into a rather good TV social historian and the first episode of this new three-part series found him trawling through the lives of the Victorian philanthropists \u2013 from the well known, such as William Wilberforce to the  not-so-well known, such as Octavia Hill, the pioneer of London's social housing.</p><p>It was all good stuff, though I couldn't help feeling I could have done with rather less of the Monty Python-style graphics and the try-hard stunts \u2013 dressing up in a top hat and berating passersby with a megaphone didn't seem to add much \u2013 and rather more context instead. Because while philanthropy emerged out of a sense that the better-off had a duty of care towards the less well-off, it also had its limitations. It is a start towards social justice but it is not an end or sufficient in itself. That's why the welfare state was  introduced. To have followed this  argument would not just have made these Victorians part of a historical  narrative rather than liberal curiosities; it would have highlighted the obvious flaws in the coalition's belief that  Do-Gooding can replace the state. But maybe that's one for later.</p><!-- Guardian Watermark: tv-and-radio/2010/nov/30/dispatches-kids-britain-doesnt-want-review|2010-11-30T13:03:49Z|e72f0f6c28687c618f522f51ef9f42b5d2f69177 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yecz",
+        "standfirst":"'Guilty until proved guilty' \u2013 so young asylum seekers are still held behind razor wire at Yarl's Wood",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/About/General/2010/11/29/1291055370755/Yarls-Wood-detention-cntr-003.jpg",
+        "commentable":"true",
+        "byline":"John Crace",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"culture/series/lastnightstv",
+        "type":"series",
+        "webTitle":"Last night's TV",
+        "webUrl":"http://www.guardian.co.uk/culture/series/lastnightstv",
+        "apiUrl":"http://content.guardianapis.com/culture/series/lastnightstv",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/television",
+        "type":"keyword",
+        "webTitle":"Television",
+        "webUrl":"http://www.guardian.co.uk/culture/television",
+        "apiUrl":"http://content.guardianapis.com/culture/television",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"tv-and-radio/tv-and-radio",
+        "type":"keyword",
+        "webTitle":"Television & radio",
+        "webUrl":"http://www.guardian.co.uk/tv-and-radio/tv-and-radio",
+        "apiUrl":"http://content.guardianapis.com/tv-and-radio/tv-and-radio",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"uk/immigration",
+        "type":"keyword",
+        "webTitle":"Immigration and asylum",
+        "webUrl":"http://www.guardian.co.uk/uk/immigration",
+        "apiUrl":"http://content.guardianapis.com/uk/immigration",
+        "sectionId":"uk",
+        "sectionName":"UK news"
+      },{
+        "id":"uk/uk",
+        "type":"keyword",
+        "webTitle":"UK news",
+        "webUrl":"http://www.guardian.co.uk/uk/uk",
+        "apiUrl":"http://content.guardianapis.com/uk/uk",
+        "sectionId":"uk",
+        "sectionName":"UK news"
+      },{
+        "id":"football/fifa",
+        "type":"keyword",
+        "webTitle":"Fifa",
+        "webUrl":"http://www.guardian.co.uk/football/fifa",
+        "apiUrl":"http://content.guardianapis.com/football/fifa",
+        "sectionId":"football",
+        "sectionName":"Football"
+      },{
+        "id":"football/sepp-blatter",
+        "type":"keyword",
+        "webTitle":"Sepp Blatter",
+        "webUrl":"http://www.guardian.co.uk/football/sepp-blatter",
+        "apiUrl":"http://content.guardianapis.com/football/sepp-blatter",
+        "sectionId":"football",
+        "sectionName":"Football"
+      },{
+        "id":"football/football",
+        "type":"keyword",
+        "webTitle":"Football",
+        "webUrl":"http://www.guardian.co.uk/football/football",
+        "apiUrl":"http://content.guardianapis.com/football/football",
+        "sectionId":"football",
+        "sectionName":"Football"
+      },{
+        "id":"society/philanthropy",
+        "type":"keyword",
+        "webTitle":"Philanthropy",
+        "webUrl":"http://www.guardian.co.uk/society/philanthropy",
+        "apiUrl":"http://content.guardianapis.com/society/philanthropy",
+        "sectionId":"society",
+        "sectionName":"Society"
+      },{
+        "id":"profile/johncrace",
+        "type":"contributor",
+        "webTitle":"John Crace",
+        "webUrl":"http://www.guardian.co.uk/profile/johncrace",
+        "apiUrl":"http://content.guardianapis.com/profile/johncrace"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"tv-and-radio/2010/nov/30/pawn-stars-cable-girl",
+      "sectionId":"tv-and-radio",
+      "sectionName":"Television &amp; radio",
+      "webPublicationDate":"2010-11-30T08:00:10Z",
+      "webTitle":"Cable girl: Pawn Stars",
+      "webUrl":"http://www.guardian.co.uk/tv-and-radio/2010/nov/30/pawn-stars-cable-girl",
+      "apiUrl":"http://content.guardianapis.com/tv-and-radio/2010/nov/30/pawn-stars-cable-girl",
+      "fields":{
+        "headline":"Cable girl: Pawn Stars",
+        "trailText":"This series about a 24 hour pawn shop in Las Vegas is like Antiques Roadshow reimagined by Hunter S Thompson, writes <strong>Lucy Mangan</strong>",
+        "body":"<p>Don't you ever sit staring out of the window and wonder about the paths not taken? If I had my time again, I always thought, I'd be a labrador breeder, or a bookseller, or <a href=\"http://www.guardian.co.uk/tv-and-radio/2010/sep/19/jon-hamm-mad-men-don-draper\" title=\"Mad Men: Jon Hamm on life as Don Draper and the blessings of late fame\">Jon Hamm's</a> wardrobe mistress. Now I think I'd like to be a pawn star. No, no, you need to listen more carefully \u2013 a <em>pawn</em> star. Like Rick Harrison on the History channel series <a href=\"http://www.history.com/shows/pawn-stars\" title=\"Pawn Stars\">Pawn Stars</a> (History channel). He's the owner/manager (along with his father Richard and his son Big Hoss) of a 24 hour pawn shop in Las Vegas. The three generations of increasingly mountainous men stand behind the countertops sizing up the pieces, the customers and their stories.</p><p>Rick is a fount of knowledge \u2013 gold coins, portable 1930s gramophones, carved \"ivory\" tusks, a Nascar trophy and a car couch all fall within his purview within a couple of episodes. Nothing fazes him. He puts the gramophone together in the twinkling of an eye, dismisses the tusk,  and knows the gold in the coin is worth $900, but also that it's a Saint-Gaudens 1924 double eagle worth $2,000, less the cost of a numismatist to grade it precisely \u2013 and everything has both a value and price (value minus seller's desperation and adjusted for temperament).</p><p>Big Hoss knows less (though he knows that setting a phone charger into the chest of a life-size Power Ranger doesn't make it more desirable, which appears to come as an entirely new thought to his enthusiastic seller), but is equally unflappable. The Harrisons must have their nervous systems removed at birth.</p><p>Most people, in fact, come to sell rather than pawn, which together with Rick's tentacular knowledge makes the shop more like the Strip's answer to Sotheby's, and the programme <a href=\"http://www.radiotimes.com/content/features/antiques-roadshow/\" title=\"'Why\" I Love\u2026Antiques Roadshow blog  \"It's the epitome of Sunday-night cosiness. A toasty duvet of a television programme to wrap round yourself as the evenings draw in.\"'>Antiques Roadshow</a> reimagined by Hunter S Thompson than the desperate sinkhole of stagnating despair that the phrases \"Las Vegas\" and \"pawn shop\" (\"Leave your car or your firstborn, top rates paid\") might naturally conjure up. If you're passing and you have a car couch you need to offload, you could do a lot worse.</p><!-- Guardian Watermark: tv-and-radio/2010/nov/30/pawn-stars-cable-girl|2010-11-30T13:03:49Z|a9ab9e8a500dba530ba5242cea5ea97d3d597360 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yean",
+        "standfirst":"This series about a 24 hour pawn shop in Las Vegas is like Antiques Roadshow reimagined by Hunter S Thompson",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/11/29/1291053119579/pawn-stars-cable-girl-luc-003.jpg",
+        "commentable":"true",
+        "byline":"Lucy Mangan",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"culture/series/cablegirl",
+        "type":"series",
+        "webTitle":"Cable girl",
+        "webUrl":"http://www.guardian.co.uk/culture/series/cablegirl",
+        "apiUrl":"http://content.guardianapis.com/culture/series/cablegirl",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/television",
+        "type":"keyword",
+        "webTitle":"Television",
+        "webUrl":"http://www.guardian.co.uk/culture/television",
+        "apiUrl":"http://content.guardianapis.com/culture/television",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"media/television",
+        "type":"keyword",
+        "webTitle":"Television industry",
+        "webUrl":"http://www.guardian.co.uk/media/television",
+        "apiUrl":"http://content.guardianapis.com/media/television",
+        "sectionId":"media",
+        "sectionName":"Media"
+      },{
+        "id":"tv-and-radio/tv-and-radio",
+        "type":"keyword",
+        "webTitle":"Television & radio",
+        "webUrl":"http://www.guardian.co.uk/tv-and-radio/tv-and-radio",
+        "apiUrl":"http://content.guardianapis.com/tv-and-radio/tv-and-radio",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"media/media",
+        "type":"keyword",
+        "webTitle":"Media",
+        "webUrl":"http://www.guardian.co.uk/media/media",
+        "apiUrl":"http://content.guardianapis.com/media/media",
+        "sectionId":"media",
+        "sectionName":"Media"
+      },{
+        "id":"profile/lucymangan",
+        "type":"contributor",
+        "webTitle":"Lucy Mangan",
+        "webUrl":"http://www.guardian.co.uk/profile/lucymangan",
+        "apiUrl":"http://content.guardianapis.com/profile/lucymangan"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"media/reality-tv",
+        "type":"keyword",
+        "webTitle":"Reality TV",
+        "webUrl":"http://www.guardian.co.uk/media/reality-tv",
+        "apiUrl":"http://content.guardianapis.com/media/reality-tv",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"lifeandstyle/lifeandstyle",
+        "type":"keyword",
+        "webTitle":"Life and style",
+        "webUrl":"http://www.guardian.co.uk/lifeandstyle/lifeandstyle",
+        "apiUrl":"http://content.guardianapis.com/lifeandstyle/lifeandstyle",
+        "sectionId":"lifeandstyle",
+        "sectionName":"Life and style"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"tv-and-radio/2010/nov/30/in-search-of-mimi-review",
+      "sectionId":"tv-and-radio",
+      "sectionName":"Television &amp; radio",
+      "webPublicationDate":"2010-11-30T08:00:08Z",
+      "webTitle":"In search of Mimi \u2013 review",
+      "webUrl":"http://www.guardian.co.uk/tv-and-radio/2010/nov/30/in-search-of-mimi-review",
+      "apiUrl":"http://content.guardianapis.com/tv-and-radio/2010/nov/30/in-search-of-mimi-review",
+      "fields":{
+        "headline":"In search of Mimi \u2013 review",
+        "trailText":"<p>Trevor Nelson promised his interview would reveal the real Mariah Carey. So why were his questions so tame, asks <strong>Elisabeth Mahoney</strong></p>",
+        "body":"<p><strong>In Search of Mimi </strong>(Radio 2) was, presenter Trevor Nelson declared, a chance to get beyond Mariah Carey's \"tabloid tales and glossy image\" and see the \"real\" person. And it did have moments of that, between friends and colleagues telling us just how fantastic she is (\"the world doesn't know how brilliant her mind is\").</p><p>I especially enjoyed Jasmine Dotiwala's recollection of Carey doing some jokey shopping for her in a corner shop in Southall, west London, to cheer her up when she was poorly. The tale was certainly a long way from Carey's diva image. \"She'd gone in and bought a handful of crappy groceries,\" Dotiwala explained. \"A giant box of super large sanitary towels; some self-raising flour to raise my spirits. Lots of silly stuff.\" I also liked Carey's description of her tasteful Christmas celebrations. \"Live reindeer,\" she said, \"and Santa visits us\".</p><p>Nelson's interview with her, though, was about as hard-edged as a Flump. Why didn't he ask her to comment  on the diva claims, especially as the  programme included mention of the best ones (\"I don't do stairs\")? Or the discrepancy between her image and the way she describes herself (\"I'm a very open, sensitive person\")?  It was all well produced, using her music inventively to give the show texture and shape, but remained frustratingly hollow overall.</p><!-- Guardian Watermark: tv-and-radio/2010/nov/30/in-search-of-mimi-review|2010-11-30T13:03:49Z|87bcc58f1aa23834bfc89f49223e54a9ca15149e -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2ye8d",
+        "standfirst":"Radio 2",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/About/General/2010/11/29/1291046019209/Mariah-Carey-003.jpg",
+        "commentable":"true",
+        "byline":"Elisabeth Mahoney",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"culture/series/radioreview",
+        "type":"series",
+        "webTitle":"Radio review",
+        "webUrl":"http://www.guardian.co.uk/culture/series/radioreview",
+        "apiUrl":"http://content.guardianapis.com/culture/series/radioreview",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/radio",
+        "type":"keyword",
+        "webTitle":"Radio",
+        "webUrl":"http://www.guardian.co.uk/culture/radio",
+        "apiUrl":"http://content.guardianapis.com/culture/radio",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"tv-and-radio/tv-and-radio",
+        "type":"keyword",
+        "webTitle":"Television & radio",
+        "webUrl":"http://www.guardian.co.uk/tv-and-radio/tv-and-radio",
+        "apiUrl":"http://content.guardianapis.com/tv-and-radio/tv-and-radio",
+        "sectionId":"tv-and-radio",
+        "sectionName":"Television &amp; radio"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"music/mariahcarey",
+        "type":"keyword",
+        "webTitle":"Mariah Carey",
+        "webUrl":"http://www.guardian.co.uk/music/mariahcarey",
+        "apiUrl":"http://content.guardianapis.com/music/mariahcarey",
+        "sectionId":"music",
+        "sectionName":"Music",
+        "references":[{
+          "type":"musicbrainz",
+          "id":"musicbrainz/494e8d09-f85b-4543-892f-a5096aed1cd4"
+        }]
+      },{
+        "id":"music/music",
+        "type":"keyword",
+        "webTitle":"Music",
+        "webUrl":"http://www.guardian.co.uk/music/music",
+        "apiUrl":"http://content.guardianapis.com/music/music",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"profile/elisabethmahoney",
+        "type":"contributor",
+        "webTitle":"Elisabeth Mahoney",
+        "webUrl":"http://www.guardian.co.uk/profile/elisabethmahoney",
+        "apiUrl":"http://content.guardianapis.com/profile/elisabethmahoney"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"stage/2010/nov/30/les-parents-terribles-review",
+      "sectionId":"stage",
+      "sectionName":"Stage",
+      "webPublicationDate":"2010-11-30T00:10:07Z",
+      "webTitle":"Les Parents Terribles - review",
+      "webUrl":"http://www.guardian.co.uk/stage/2010/nov/30/les-parents-terribles-review",
+      "apiUrl":"http://content.guardianapis.com/stage/2010/nov/30/les-parents-terribles-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"Les Parents Terribles - review",
+        "trailText":"Director Chris Rolls has grasped the point that this 1938 play by Jean Cocteau is more Oedipal farce than high tragedy; written in eight, opium-filled days, it works on an audience like a mad dream, writes <strong>Michael Billington</strong>",
+        "body":"<p>The Donmar's West End season is driven by the desire to promote young directors, and it has an excellent one in Chris Rolls. He has grasped the key point that this 1938 play by Jean Cocteau is, in Jeremy Sams's witty translation, more Oedipal farce than high tragedy. Without overpitching the play's inherent camp, Rolls also allows his first-rate cast a free rein. Cocteau presents us with a vivid picture of erotic mayhem amongst the Parisian bourgeoisie.Yvonne is a self-dramatising boulevard Jocasta, while her husband, George, is a failed inventor obsessed with creating an underwater machine gun. Trouble arises, however, when their son, Michael, falls in love with a young bookbinder, unaware of the fact she is also his father's mistress. As the complications spiral, the day is saved only by Yvonne's sister, Leo, whose passion for order amounts to a religion.</p><p>What makes the play funny is the contrast between Leo's precision and the rest of the family's strenuous bohemianism: something perfectly brought out in Rolls's production.</p><p>Sylvestra Le Touzel's superb Leo has the starched sexiness of a very good district nurse with a taste for Machiavellian politics. She is also an ideal foil to Frances Barber, who as the sickly, incestuous Yvonne hugs the walls and hurls herself at the unsuspecting furniture with a fervour that even Bette Davis might have envied. Anthony Calf as the floppy-haired, ineffectual father and Tom Byam Shaw as the troubled, mother-dominated son add to the air of frenzy. Andrew D Edwards's design, with its mirrored walls and ceiling, exactly reflects the family's narcissism.</p><p>Cocteau's play is not without its own self-consciousness but, written in eight, opium-filled days, it works on an audience like a mad dream.</p><p><em> </em></p><!-- Guardian Watermark: stage/2010/nov/30/les-parents-terribles-review|2010-11-30T13:03:49Z|6c8e306a56f569bf4288a3c6bc7ff4877fa1421f -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yegh",
+        "standfirst":"Trafalgar Studios, London",
+        "commentable":"true",
+        "byline":"Michael Billington",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"stage/theatre",
+        "type":"keyword",
+        "webTitle":"Theatre",
+        "webUrl":"http://www.guardian.co.uk/stage/theatre",
+        "apiUrl":"http://content.guardianapis.com/stage/theatre",
+        "sectionId":"stage",
+        "sectionName":"Stage"
+      },{
+        "id":"stage/stage",
+        "type":"keyword",
+        "webTitle":"Stage",
+        "webUrl":"http://www.guardian.co.uk/stage/stage",
+        "apiUrl":"http://content.guardianapis.com/stage/stage",
+        "sectionId":"stage",
+        "sectionName":"Stage"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"profile/michaelbillington",
+        "type":"contributor",
+        "webTitle":"Michael Billington",
+        "webUrl":"http://www.guardian.co.uk/profile/michaelbillington",
+        "apiUrl":"http://content.guardianapis.com/profile/michaelbillington"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"music/2010/nov/29/arditti-quartet-brian-ferneyhough-review",
+      "sectionId":"music",
+      "sectionName":"Music",
+      "webPublicationDate":"2010-11-29T22:45:00Z",
+      "webTitle":"Arditti Quartet - review",
+      "webUrl":"http://www.guardian.co.uk/music/2010/nov/29/arditti-quartet-brian-ferneyhough-review",
+      "apiUrl":"http://content.guardianapis.com/music/2010/nov/29/arditti-quartet-brian-ferneyhough-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"Arditti Quartet - review",
+        "trailText":"Not unexpectedly, the new 25-minute quartet is tough and demanding, for performers and audiences alike, writes <strong>Andrew Clements</strong>",
+        "body":"<p>For more than 30 years, the Arditti Quartet has introduced every one of Brian Ferneyhough's new works for string quartet. The most recent is his Sixth Quartet, which the group unveiled last month at the new-music festival at Donaueschingen, Germany, and brought to Huddersfield's equivalent as part of a programme made up entirely of UK premieres.</p><p>Not unexpectedly, the new 25-minute quartet is tough and demanding, for performers and audiences alike. A dense, almost manically detailed score that sets impossible technical demands, it comes with a typically opaque programme note from Ferneyhough that talks about \"staging a discrepancy of adequation\". Yet the sheer tangled physicality of the music compels attention, while its occasional moments of clarity, when the quarter-tone inflected textures crystallise into uncomplicated unisons in a way that Ferenyhough's music of 20 years ago would never have countenanced, are startlingly effective.</p><p>The Ardittis treated the music's sometimes outrageous expectations with unflappable command, just as they dealt suavely with the very different demands of Olga Neuwirth's In the Realms of the Unreal, Pierluigi Billone's rather austere and musically meagre Muri IIIb, and Philippe Manoury's disappointingly conventional Stringendo.</p><p>The following day they were back, for a short recital devoted to a single, three-part work, Vent Litt Lenger, by the Norwegian composer and violinist Ole-Henrik Moe. Essentially an introspective study in texture somewhere between Ligeti and Xenakis, it climaxes in a torrent of tremolandos in which the quartet is reinforced by an extra violin. That is usually provided by the composer himself, but in this performance, because Moe was ill, it was played by Graeme Jennings, an Arditti alumnus who just happened to be in the right place at the right time.</p><!-- Guardian Watermark: music/2010/nov/29/arditti-quartet-brian-ferneyhough-review|2010-11-30T13:03:49Z|e9c8e2516f6190c1fc6a9857edc0574686b0cef1 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yebc",
+        "standfirst":"St Paul's Hall, Huddersfield",
+        "commentable":"true",
+        "byline":"Andrew Clements",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"music/classicalmusicandopera",
+        "type":"keyword",
+        "webTitle":"Classical music",
+        "webUrl":"http://www.guardian.co.uk/music/classicalmusicandopera",
+        "apiUrl":"http://content.guardianapis.com/music/classicalmusicandopera",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"music/music",
+        "type":"keyword",
+        "webTitle":"Music",
+        "webUrl":"http://www.guardian.co.uk/music/music",
+        "apiUrl":"http://content.guardianapis.com/music/music",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"profile/andrewclements",
+        "type":"contributor",
+        "webTitle":"Andrew Clements",
+        "webUrl":"http://www.guardian.co.uk/profile/andrewclements",
+        "apiUrl":"http://content.guardianapis.com/profile/andrewclements"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"tone/livereview",
+        "type":"tone",
+        "webTitle":"Live music reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/livereview",
+        "apiUrl":"http://content.guardianapis.com/tone/livereview"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"music/2010/nov/29/bbcso-knussen-review",
+      "sectionId":"music",
+      "sectionName":"Music",
+      "webPublicationDate":"2010-11-29T22:15:08Z",
+      "webTitle":"BBCSO/Knussen - review",
+      "webUrl":"http://www.guardian.co.uk/music/2010/nov/29/bbcso-knussen-review",
+      "apiUrl":"http://content.guardianapis.com/music/2010/nov/29/bbcso-knussen-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"BBCSO/Knussen - review",
+        "trailText":"The real meat in the programme came in the second half, with the premiere of the revised version of Julian Anderson's choral work Heaven Is Shy of Earth, writes <strong>George Hall</strong>",
+        "body":"<p>Receiving its European premiere in this BBC Symphony programme under Oliver Knussen was Wanderlust by the 31-year-old American Sean Shepherd. It's a triptych, each panel describing a place \u2013 the windy deserts of the composer's native Nevada, the area around Aldeburgh, and Frank Gehry's Guggenheim Museum in Bilbao, which Shepherd knows only from its designs.</p><p>Each movement successfully conjures a specific atmosphere. While demonstrating a consistently brilliant use of colour, the result proved pleasant but insubstantial.</p><p>The real meat in the programme came in the second half, with the premiere of the revised version of Julian Anderson's choral work Heaven Is Shy of Earth, which sets parts of the Mass, Psalm 84 and poems by Emily Dickinson, and was first heard at the 2006 Proms. Since then Anderson has extended it with a further movement, Gloria (with Bird), which highlights the piece's intention to reflect and celebrate the natural world.</p><p>Anderson's command of the orchestral medium is consistently on display. Layered through with the strands of the choral writing, consummately realised by the BBC Symphony Chorus, the result is a sumptuous and perfectly structured score that is immediate in its impact yet subtle in the fineness of its surface allure. Susan Bickley was the confident soloist, conveying the bulk of the Dickinson extracts with determination.</p><p>Before the interval, Claire Booth struggled to do the same in Aaron Copland's Dickinson settings, her delicate soprano sometimes masked by the composer's arrangements.</p><!-- Guardian Watermark: music/2010/nov/29/bbcso-knussen-review|2010-11-30T13:03:49Z|b753a85cd88f69c58baf7b6e7699753f0bc94e24 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yeb8",
+        "standfirst":"Barbican, London",
+        "commentable":"true",
+        "byline":"George Hall",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"music/classicalmusicandopera",
+        "type":"keyword",
+        "webTitle":"Classical music",
+        "webUrl":"http://www.guardian.co.uk/music/classicalmusicandopera",
+        "apiUrl":"http://content.guardianapis.com/music/classicalmusicandopera",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"music/music",
+        "type":"keyword",
+        "webTitle":"Music",
+        "webUrl":"http://www.guardian.co.uk/music/music",
+        "apiUrl":"http://content.guardianapis.com/music/music",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"tone/livereview",
+        "type":"tone",
+        "webTitle":"Live music reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/livereview",
+        "apiUrl":"http://content.guardianapis.com/tone/livereview"
+      },{
+        "id":"profile/georgehall",
+        "type":"contributor",
+        "webTitle":"George Hall",
+        "webUrl":"http://www.guardian.co.uk/profile/georgehall",
+        "apiUrl":"http://content.guardianapis.com/profile/georgehall"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"music/2010/nov/29/schlippenbach-trio-evan-parker-review",
+      "sectionId":"music",
+      "sectionName":"Music",
+      "webPublicationDate":"2010-11-29T22:00:01Z",
+      "webTitle":"Schlippenbach Trio",
+      "webUrl":"http://www.guardian.co.uk/music/2010/nov/29/schlippenbach-trio-evan-parker-review",
+      "apiUrl":"http://content.guardianapis.com/music/2010/nov/29/schlippenbach-trio-evan-parker-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"Schlippenbach Trio",
+        "trailText":"The Schlippenbach Trio is celebrating its 40th birthday with the only preparation it knows how \u2013 just start playing and see what happens, writes <strong>John Fordham</strong>",
+        "body":"<p>Pianist and composer Alex von Schlippenbach is one of the most influential of a postwar generation of German jazz musicians who revived the music after years of Nazi banishment. After a classical education in the 50s, Schlippenbach launched the pioneering Globe Unity Orchestra, and in 1970 formed an improv trio with his compatriot Paul Lovens on drums and British saxophonist Evan Parker. Now, the Schlippenbach Trio is celebrating its 40th birthday with the only preparation it knows how \u2013 just start playing and see what happens.</p><p>On their second night at the Vortex, the group began in a typical toe-in-the-water improv manner, with Schlippenbach's softly struck notes drawing lightly hissing cymbal patterns from Lovens, while Parker pondered his moment to enter. But soon Parker's short-burst tenor-sax phrasing was accelerating over the pianist's truculently stabbed chords. When the tumult ebbed, Parker blew delicately squeezed and breathy sounds, heated them up for another roaring exchange with Lovens, and then edged his way into a loosely-sketched Thelonius Monk theme.</p><p>The soundscape constantly changed. Schlippenbach made piano-tuning noises against ringing, finger-cymbal shimmers, then unleashed a boogie-like pattern for Lovens's free-swing. A now-you-hear-it-now-you-don't approach to Monk opened the second half, and Schlippenbach introduced prepared-piano clatterings under a single sustained sax note that passed slowly through rich tone changes. For long stretches, the band sounded as exhilaratingly swinging and melodic as a conventional postbop group, without directly quoting from any of that style's material. Thelonious Monk would have loved it.</p><!-- Guardian Watermark: music/2010/nov/29/schlippenbach-trio-evan-parker-review|2010-11-30T13:03:49Z|6ef9f4a2433292f6ee3382db928a9b4d8262548f -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yeae",
+        "standfirst":"Vortex, London",
+        "commentable":"true",
+        "byline":"John Fordham",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"music/jazz",
+        "type":"keyword",
+        "webTitle":"Jazz",
+        "webUrl":"http://www.guardian.co.uk/music/jazz",
+        "apiUrl":"http://content.guardianapis.com/music/jazz",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"profile/johnfordham",
+        "type":"contributor",
+        "webTitle":"John Fordham",
+        "webUrl":"http://www.guardian.co.uk/profile/johnfordham",
+        "apiUrl":"http://content.guardianapis.com/profile/johnfordham"
+      },{
+        "id":"music/music",
+        "type":"keyword",
+        "webTitle":"Music",
+        "webUrl":"http://www.guardian.co.uk/music/music",
+        "apiUrl":"http://content.guardianapis.com/music/music",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"tone/livereview",
+        "type":"tone",
+        "webTitle":"Live music reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/livereview",
+        "apiUrl":"http://content.guardianapis.com/tone/livereview"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"stage/2010/nov/29/rich-hall-comedy-review",
+      "sectionId":"stage",
+      "sectionName":"Stage",
+      "webPublicationDate":"2010-11-29T21:46:00Z",
+      "webTitle":"Rich Hall - review",
+      "webUrl":"http://www.guardian.co.uk/stage/2010/nov/29/rich-hall-comedy-review",
+      "apiUrl":"http://content.guardianapis.com/stage/2010/nov/29/rich-hall-comedy-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"Rich Hall - review",
+        "trailText":"<p>It's only when Hall knocks out a song that the evening truly takes off, writes <strong>Brian Logan</strong></p>",
+        "body":"<p>His recent BBC documentary The Dirty South announced a mission to redeem the reputation of America's bottom half \u2013 which may be why Rich Hall has left redneck alter ego Otis Lee Crenshaw behind on his current tour. And yet, tonight's highlights find Hall at his keyboard, singing Otis-alike songs about dysfunctional superheroes and the Ku&nbsp;Klux Klan. Elsewhere, it's perfectly enjoyable to listen as this grindstone-voiced comic dispenses grumpy/twinkly observations on Boris Johnson, Raoul Moat and the Tea Party. But his straight standup lacks climaxes, and it's only when Hall knocks out a song that the evening truly takes off.</p><p>Before that, he ranges across life, politics and culture on both sides of the Atlantic, and never lacks deserving targets for his barking ire. There's a cathartic rant about what Gordon Brown should have said to Gillian Duffy, derision for America's colour-coded system of terror alerts (\"What if it's blue? Is terror pregnant?\"), and frayed patience at Al Gore's celebrity-driven climate change campaign. \"Put a brick in all eight of your toilets, you mansion-dwelling Tennessee bastard,\" rasps Hall.</p><p>So far, so laconically entertaining. But the musical numbers concentrate the Hall shtick. Some are part-improvised; all combine pathos and absurdity to delicious effect. \"Hate on your knuckles/ shotgun down your pants,\" runs his Klan ballad. \"Wondering why no one is asking you to dance.\" Lyrics like that do nothing for the good name of the deep south, but they shore up Hall's reputation as one of the most reliable live acts in comedy.</p><!-- Guardian Watermark: stage/2010/nov/29/rich-hall-comedy-review|2010-11-30T13:03:49Z|681283a9cd4b4bac4e7a8cdb6cf36cfae4c6fbf2 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2yea5",
+        "standfirst":"Richmond Theatre, London",
+        "commentable":"true",
+        "byline":"Brian Logan",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"stage/comedy",
+        "type":"keyword",
+        "webTitle":"Comedy",
+        "webUrl":"http://www.guardian.co.uk/stage/comedy",
+        "apiUrl":"http://content.guardianapis.com/stage/comedy",
+        "sectionId":"stage",
+        "sectionName":"Stage"
+      },{
+        "id":"stage/stage",
+        "type":"keyword",
+        "webTitle":"Stage",
+        "webUrl":"http://www.guardian.co.uk/stage/stage",
+        "apiUrl":"http://content.guardianapis.com/stage/stage",
+        "sectionId":"stage",
+        "sectionName":"Stage"
+      },{
+        "id":"profile/brianlogan",
+        "type":"contributor",
+        "webTitle":"Brian Logan",
+        "webUrl":"http://www.guardian.co.uk/profile/brianlogan",
+        "apiUrl":"http://content.guardianapis.com/profile/brianlogan"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"music/2010/nov/29/femi-kuti-fela-review",
+      "sectionId":"music",
+      "sectionName":"Music",
+      "webPublicationDate":"2010-11-29T21:30:23Z",
+      "webTitle":"Femi Kuti - review",
+      "webUrl":"http://www.guardian.co.uk/music/2010/nov/29/femi-kuti-fela-review",
+      "apiUrl":"http://content.guardianapis.com/music/2010/nov/29/femi-kuti-fela-review",
+      "fields":{
+        "starRating":"3",
+        "headline":"Femi Kuti - review",
+        "trailText":"Femi struggles to escape long shadow cast by Fela fever, writes <strong>Robin Denselow</strong>",
+        "body":"<p>These are interesting times for Femi Kuti. Now 48, the oldest son of the legendary Fela, Kuti has established an impressive international career by developing his own brand of his father's Afrobeat fusion, and has become Nigeria's most successful living music export. Earlier this year he played at Glastonbury and the opening ceremony of the World Cup, and now he is in the UK for a tour just as the musical drama Fela! at the National theatre is reminding London audiences of the original Afrobeat classics. Meanwhile, Fela's youngest son Seun has been working with Brian Eno on what will be one of the most anticipated African albums of next year.</p><p>So how should Femi react to all of this? The safe option would have been to please the Barbican crowd (which included Sahr Ngaujah, who plays Fela at the National) with a handful of Fela favourites. But that's not Femi's style. He has an album of his own compositions to promote, and the set was dominated by the political, if often safely predictable, songs from the new Africa for Africa.</p><p>Still, Femi Kuti is a slick, theatrical entertainer who delighted the Barbican crowd despite the shortcomings of some of his new material. His 10-piece band included a five-man brass section, and they paraded on stage followed by three energetic dancers whose remarkable gyrations enlivened much of the show. Then came Kuti himself, in sandals and an elaborate multicoloured suit, playing first keyboards and then saxophone as he launched into a furious treatment of Truth Don Die, from the late 90s, followed by the first set of songs from the new album.</p><p>His current approach to Afrobeat is to treat it with frantic aggression, with the occasional quieter vocal passages interspersed with full-tilt playing from both himself and the band. He is an impressive instrumentalist, but this was a style that tended to depend on energy rather than variety or melody.</p><p>His lyrics dealt with political corruption, the messages of Fela, Mandela and Kwame Nkrumah in Make We Remember or (rather less predictably) the problems facing Nigeria's economic and financial crimes commission in the furiously declaimed Obasanjo Don Play You Wayo. Towards the end, he interspersed the title track from his new album with a lecture that veered from slavery to pan-Africanism, and finally switched from politics to sex with Beng Beng Beng (once banned in Nigeria) and a mildly risque chat about relationships that was more entertaining and original than much of the political protest. His dad did that far better.</p><!-- Guardian Watermark: music/2010/nov/29/femi-kuti-fela-review|2010-11-30T13:03:49Z|89648b8448fff007469c53fef7a3607d25d09e67 -->",
+        "hasStoryPackage":"false",
+        "shortUrl":"http://gu.com/p/2ye9d",
+        "standfirst":"Barbican, London",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2010/11/29/1291047789254/Femi-Kuti-Performs-At-Bar-003.jpg",
+        "commentable":"true",
+        "byline":"Robin Denselow",
+        "liveBloggingNow":"false",
+        "publication":"The Guardian"
+      },
+      "tags":[{
+        "id":"music/femi-kuti",
+        "type":"keyword",
+        "webTitle":"Femi Kuti",
+        "webUrl":"http://www.guardian.co.uk/music/femi-kuti",
+        "apiUrl":"http://content.guardianapis.com/music/femi-kuti",
+        "sectionId":"music",
+        "sectionName":"Music",
+        "references":[{
+          "type":"musicbrainz",
+          "id":"musicbrainz/702d2b90-eef0-4354-b2c4-6366eba92b7f"
+        }]
+      },{
+        "id":"music/fela-kuti",
+        "type":"keyword",
+        "webTitle":"Fela Kuti",
+        "webUrl":"http://www.guardian.co.uk/music/fela-kuti",
+        "apiUrl":"http://content.guardianapis.com/music/fela-kuti",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"music/worldmusic",
+        "type":"keyword",
+        "webTitle":"World music",
+        "webUrl":"http://www.guardian.co.uk/music/worldmusic",
+        "apiUrl":"http://content.guardianapis.com/music/worldmusic",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"music/music",
+        "type":"keyword",
+        "webTitle":"Music",
+        "webUrl":"http://www.guardian.co.uk/music/music",
+        "apiUrl":"http://content.guardianapis.com/music/music",
+        "sectionId":"music",
+        "sectionName":"Music"
+      },{
+        "id":"culture/culture",
+        "type":"keyword",
+        "webTitle":"Culture",
+        "webUrl":"http://www.guardian.co.uk/culture/culture",
+        "apiUrl":"http://content.guardianapis.com/culture/culture",
+        "sectionId":"culture",
+        "sectionName":"Culture"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"tone/livereview",
+        "type":"tone",
+        "webTitle":"Live music reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/livereview",
+        "apiUrl":"http://content.guardianapis.com/tone/livereview"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      },{
+        "id":"publication/theguardian",
+        "type":"publication",
+        "webTitle":"The Guardian",
+        "webUrl":"http://www.guardian.co.uk/theguardian/all",
+        "apiUrl":"http://content.guardianapis.com/theguardian/all",
+        "sectionId":"theguardian",
+        "sectionName":"From the Guardian"
+      }]
+    },{
+      "id":"technology/gamesblog/2010/nov/29/donkey-kong-country-returns-wii-review",
+      "sectionId":"technology",
+      "sectionName":"Technology",
+      "webPublicationDate":"2010-11-29T13:44:08Z",
+      "webTitle":"Donkey Kong Country Returns \u2013 review",
+      "webUrl":"http://www.guardian.co.uk/technology/gamesblog/2010/nov/29/donkey-kong-country-returns-wii-review",
+      "apiUrl":"http://content.guardianapis.com/technology/gamesblog/2010/nov/29/donkey-kong-country-returns-wii-review",
+      "fields":{
+        "starRating":"4",
+        "headline":"Donkey Kong Country Returns \u2013 review",
+        "trailText":"Mike Anderiesz: An enjoyable play, but Nintendo could have done more to develop this game from its mid-90s original",
+        "body":"<p>For mature gamers such as myself, Donkey Kong Country holds a treasured place; the game that started a memorable Indian summer for arguably the greatest console ever made, the SNES. With the Wii's reputation for quirky and innovative gameplay under new threat from Microsoft's Kinect, could this be the game that rekindles affection for the format?</p><p>Considering the fact that 16 years have passed since the release of the original, Donkey Kong Country Returns could have been mapped out in the mid 90s (albeit with the later addition of motion control). It's all about conquering each of an initial eight lushly-coloured worlds, gathering bananas for health and hidden extras, and grabbing puzzle pieces or letter icons for bonuses. Graphically, it's about as pin sharp and colourful as we've seen on the Wii but the formulaic early gameplay does rely too much on nostalgia for its appeal. Occasionally, you may be shot into the screen to access a hidden area, but compared to the way Sonic Colours seamlessly blends 2D and 3D action, it is slightly underwhelming.</p><p>However, once you get through a few levels \u2013 particularly to the fondly remembered mine-cart sections \u2013 level design improves significantly. Each new terrain (including factories, treetops and, of course, jungles) brings its own vivid detail and natural enemies, including the boss battles, which are as big, boldly coloured and as fiendishly unpredictable as they always seemed to be.</p><p>It's also as rock hard to play as the original, although you can enlist Diddy Kong's help (by hitting a DK barrel) or ask a buddy to play him. But the main reason for the difficulty is having to restart every level from the beginning if you lose a life. Personally, I find this a sneaky way of making the game seem artificially challenging, but there are plenty of fans for this less-forgiving approach, so it's horses for courses.</p><p>Equally divisive will be the interface \u2013 which can either be played using Wiimote and Nunchuck together or a sideways-held Wiimote. Both work well enough until you get to specific points that require shaking the controller while moving at speed (for instance stunning enemies or rolling across pits) where control definitely suffers. Practice makes perfect, of course, but I'd rather games were fair as well as tough.</p><p>So no, it's not perfect and it probably won't catch the imagination in the same way that the original did . But DKCR is a colourful, creative romp with one of Nintendo's oldest creations, and with all the hidden levels, bosses and treats thrown in, you'll still be playing it after Christmas.</p><!-- Guardian Watermark: technology/gamesblog/2010/nov/29/donkey-kong-country-returns-wii-review|2010-11-30T13:03:49Z|1a7c87f8b344d155aca8e60a2adc3925f875302a -->",
+        "hasStoryPackage":"false",
+        "strap":"Game review",
+        "shortUrl":"http://gu.com/p/2yev2",
+        "standfirst":"Wii; £44.99; cert 3+; Retro Studios/Nintendo",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Technology/Pix/pictures/2010/11/29/1291038209740/DK-Country-Returns-003.jpg",
+        "commentable":"true",
+        "byline":"Mike Anderiesz",
+        "liveBloggingNow":"false",
+        "publication":"guardian.co.uk"
+      },
+      "tags":[{
+        "id":"technology/games",
+        "type":"keyword",
+        "webTitle":"Games",
+        "webUrl":"http://www.guardian.co.uk/technology/games",
+        "apiUrl":"http://content.guardianapis.com/technology/games",
+        "sectionId":"technology",
+        "sectionName":"Technology"
+      },{
+        "id":"technology/gamesblog",
+        "type":"blog",
+        "webTitle":"Games blog",
+        "webUrl":"http://www.guardian.co.uk/technology/gamesblog",
+        "apiUrl":"http://content.guardianapis.com/technology/gamesblog",
+        "sectionId":"technology",
+        "sectionName":"Technology"
+      },{
+        "id":"technology/technology",
+        "type":"keyword",
+        "webTitle":"Technology",
+        "webUrl":"http://www.guardian.co.uk/technology/technology",
+        "apiUrl":"http://content.guardianapis.com/technology/technology",
+        "sectionId":"technology",
+        "sectionName":"Technology"
+      },{
+        "id":"tone/reviews",
+        "type":"tone",
+        "webTitle":"Reviews",
+        "webUrl":"http://www.guardian.co.uk/tone/reviews",
+        "apiUrl":"http://content.guardianapis.com/tone/reviews"
+      },{
+        "id":"profile/mikeanderiesz",
+        "type":"contributor",
+        "webTitle":"Mike Anderiesz",
+        "webUrl":"http://www.guardian.co.uk/profile/mikeanderiesz",
+        "apiUrl":"http://content.guardianapis.com/profile/mikeanderiesz"
+      },{
+        "id":"technology/wii",
+        "type":"keyword",
+        "webTitle":"Wii",
+        "webUrl":"http://www.guardian.co.uk/technology/wii",
+        "apiUrl":"http://content.guardianapis.com/technology/wii",
+        "sectionId":"technology",
+        "sectionName":"Technology"
+      },{
+        "id":"technology/nintendo",
+        "type":"keyword",
+        "webTitle":"Nintendo",
+        "webUrl":"http://www.guardian.co.uk/technology/nintendo",
+        "apiUrl":"http://content.guardianapis.com/technology/nintendo",
+        "sectionId":"technology",
+        "sectionName":"Technology"
+      },{
+        "id":"type/article",
+        "type":"type",
+        "webTitle":"Article",
+        "webUrl":"http://www.guardian.co.uk/articles",
+        "apiUrl":"http://content.guardianapis.com/articles"
+      }]
+    }]
+  }
+}

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpArch">
+      <HintPath>..\Binaries\SharpArch.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Services.Client" />
@@ -42,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\Enumeration.cs" />
+    <Compile Include="BaseClasses\QueryOptions.cs" />
     <Compile Include="Model\MusicTypes.cs" />
     <Compile Include="Model\ReviewTypes.cs" />
     <Compile Include="Interfaces\IRepository.cs" />

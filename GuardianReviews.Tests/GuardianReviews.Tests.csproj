@@ -55,12 +55,22 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.3.1.416.3\lib\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
     <Reference Include="NHibernate.ByteCode.Castle">
       <HintPath>..\packages\NHibernate.Core.2.1.2.4000\lib\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Linq">
       <HintPath>..\packages\NHibernate.Linq.1.0\lib\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Validator">
+      <HintPath>..\Binaries\NHibernate.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\SharpArch.dll</HintPath>
     </Reference>
     <Reference Include="Should">
       <HintPath>..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
@@ -83,14 +93,16 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NHibernate\SharpArchTests.cs" />
     <Compile Include="NHibernate\TestDataAccess.cs" />
     <Compile Include="OpenPlatform\TestGetMusicType.cs" />
     <Compile Include="OpenPlatform\TestGetReviewType.cs" />
+    <Compile Include="OpenPlatform\TestReviewFetcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\AccountControllerTest.cs" />
@@ -103,6 +115,9 @@
     <Content Include="OpenPlatform\Reviews2.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="OpenPlatform\ReviewsWithAllFields.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\GuardianOpenPlatform\Guardian.OpenPlatform.Tests\Guardian.OpenPlatform.Tests.csproj">
@@ -126,7 +141,7 @@
       <Name>GuardianReviews.OpenPlatform</Name>
     </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Web\GuardianReviews.Web.csproj">
-      <Project>{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}</Project>
+      <Project>{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}</Project>
       <Name>GuardianReviews.Web</Name>
     </ProjectReference>
   </ItemGroup>

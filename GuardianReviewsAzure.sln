@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "GuardianReviewsAzure", "GuardianReviewsAzure\GuardianReviewsAzure.ccproj", "{6CB05206-6E0F-498A-9C34-EEAEA6EAF1B7}"
@@ -6,8 +6,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Domain", "GuardianReviews.Domain\GuardianReviews.Domain.csproj", "{588B4672-6EC9-405E-81EF-410FD24D4D82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guardian.OpenPlatform", "..\GuardianOpenPlatform\Guardian.OpenPlatform\Guardian.OpenPlatform.csproj", "{F5199BEF-9300-4B72-9648-2108470244FE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Web", "GuardianReviews.Web\GuardianReviews.Web.csproj", "{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Tests", "GuardianReviews.Tests\GuardianReviews.Tests.csproj", "{DC90C2B9-053F-4624-A5C3-C236511D639D}"
 EndProject
@@ -23,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.NHibernate", "GuardianReviews.NHibernate\GuardianReviews.NHibernate.csproj", "{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.Web", "GuardianReviews.Web\GuardianReviews.Web.csproj", "{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +42,6 @@ Global
 		{F5199BEF-9300-4B72-9648-2108470244FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5199BEF-9300-4B72-9648-2108470244FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5199BEF-9300-4B72-9648-2108470244FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E1BD249-141C-4FDB-A85A-AA1D6531FC5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC90C2B9-053F-4624-A5C3-C236511D639D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC90C2B9-053F-4624-A5C3-C236511D639D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC90C2B9-053F-4624-A5C3-C236511D639D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -66,6 +62,10 @@ Global
 		{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF22651E-AE2D-4CC8-B93A-E1C182C72ECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

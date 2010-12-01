@@ -1,15 +1,15 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MvcWebRole1")]
+[assembly: AssemblyTitle("GuardianReviews.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("MvcWebRole1")]
+[assembly: AssemblyProduct("GuardianReviews.Web")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("511cd7db-f365-49a3-971b-652f908c97d7")]
+[assembly: Guid("b92fcfc4-da9e-4166-9ca8-aec35d633d7f")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,4 +1,4 @@
-﻿using FluentNHibernate.Automapping.Alterations;
+using FluentNHibernate.Automapping.Alterations;
 using GuardianReviews.Domain.Model;
 
 namespace GuardianReviews.NHibernate.Mappings
@@ -9,9 +9,8 @@ namespace GuardianReviews.NHibernate.Mappings
 
         public void Override(FluentNHibernate.Automapping.AutoMapping<MusicReview> mapping)
         {
-            mapping.HasManyToMany(m => m.MusicTypes)
-                .Cascade.All()
-                .AsBag();
+            mapping.Table("MusicReviews");
+
         }
 
         #endregion

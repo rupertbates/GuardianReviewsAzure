@@ -12,10 +12,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using SharpArch.Core.DomainModel;
 
 namespace GuardianReviews.Domain.Model
 {
-    public class Review
+    public class Review : Entity 
     {
         protected Review()
         {
@@ -25,12 +26,17 @@ namespace GuardianReviews.Domain.Model
         {
             ReviewType = type;
         }
-        public virtual string Id
+        public virtual int Id
+        {
+            get;
+            protected set;
+        }
+        public virtual string Title
         {
             get;
             set;
         }
-        public virtual string Title
+        public virtual string Body
         {
             get;
             set;

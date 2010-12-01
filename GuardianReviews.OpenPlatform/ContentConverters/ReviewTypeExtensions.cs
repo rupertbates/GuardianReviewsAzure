@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,12 +63,6 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
                 return ReviewTypes.Unknown;
 
             return section.First().Value;
-        }
-        public static int GetStarRating(this Content content)
-        {
-            //TODO: sort this out
-            return 3;
-            //content.Fields.
         }
     }
 }

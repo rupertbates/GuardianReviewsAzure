@@ -1,4 +1,4 @@
-﻿namespace GuardianReviews.Domain.Model
+namespace GuardianReviews.Domain.Model
 {
     public enum StarRatings : int
     {

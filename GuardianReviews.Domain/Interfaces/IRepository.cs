@@ -1,15 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
+using GuardianReviews.Domain.BaseClasses;
+using SharpArch.Core.PersistenceSupport;
 
 namespace GuardianReviews.Domain.Interfaces
 {
-    public interface IRepository<T>
+    public interface IQueryRepository<T> : IRepository<T>
     {
-        List<T> Select(Func<T, bool> predicate);
-        void Insert(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        IList<T> FindAll(QueryOptions<T> options);
+        IList<T> FindAll(Func<T, bool> predicate);
+        IList<T> FindAll(Func<T, bool> predicate, QueryOptions<T> options);
+        void SaveMany(IEnumerable<T> entities);
     }
 }
