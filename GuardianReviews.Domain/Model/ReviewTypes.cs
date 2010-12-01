@@ -19,6 +19,8 @@ namespace GuardianReviews.Domain.Model
         }
         public ReviewTypes()
         {
+            Id = ReviewTypes.Unknown.Id;
+            DisplayName = ReviewTypes.Unknown.DisplayName;
             Reviews = new List<Review>();
         }
 

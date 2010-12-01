@@ -8,7 +8,9 @@ using System.Web.Routing;
 using Castle.Facilities.FactorySupport;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using GuardianReviews.Domain.Model;
 using GuardianReviews.NHibernate.Mappings;
+using GuardianReviews.Web.Binders;
 using GuardianReviews.Web.Castle;
 using GuardianReviews.Web.Controllers;
 using GuardianReviews.Domain.Interfaces;
@@ -33,12 +35,18 @@ namespace GuardianReviews.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+                "ReviewType", // Route name
+                "review/{reviewType}", // URL with parameters
+                new { controller = "Review", action = "Index" } // Parameter defaults
+            );
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
+            
+
 
         }
 
@@ -50,8 +58,8 @@ namespace GuardianReviews.Web
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
-            
 
+            ModelBinders.Binders.Add(typeof(ReviewTypes), new EnumerationBinder<ReviewTypes>(ReviewTypes.Unknown));
 
         }
         /// <summary>

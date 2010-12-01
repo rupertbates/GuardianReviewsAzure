@@ -79,7 +79,8 @@ namespace GuardianReviews.Domain.BaseClasses
 
         public static T FromDisplayName<T>(string displayName) where T : Enumeration, new()
         {
-            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName == displayName);
+            displayName = displayName.ToLower();
+            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName.ToLower() == displayName);
             return matchingItem;
         }
 

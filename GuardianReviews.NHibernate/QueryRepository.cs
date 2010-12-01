@@ -33,6 +33,9 @@ namespace GuardianReviews.NHibernate
         }
         protected IList<T> ExecuteQueryOptions(IQueryable<T> query, QueryOptions<T> options)
         {
+            if (options == null)
+                return query.ToList();
+
             if (options.OrderBySelector != null)
             {
                 if (options.OrderDirection == OrderByDirection.Ascending)
