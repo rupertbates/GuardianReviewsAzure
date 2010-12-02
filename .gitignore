@@ -10,6 +10,9 @@
 
 # Include dlls if they're in the binaries or NuGet packages directory
 !/Binaries/*.dll
+!/Binaries/*/*.dll
+!/Binaries/*.pdb
+!/Binaries/*/*.pdb
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
 

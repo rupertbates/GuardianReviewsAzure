@@ -1,0 +1,11 @@
+﻿@{
+    View.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Members Only Area </h1>
+	<p>Congratulations, <b>@Session["FriendlyIdentifier"]</b>. You have completed the OpenID login process.
+	</p>
+	<p>
+		@Html.ActionLink("Logout", "logout")
+	</p>
