@@ -1,22 +1,28 @@
-@model List<GuardianReviews.Domain.Model.Review>
-@{
-    //View.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@using GuardianReviews.Domain.Model
+@using GuardianReviews.Domain.BaseClasses
+@model List<Review>
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
 
-<h2>All Reviews</h2>
-<ul>
-@foreach (var review in Model)
-{
-     <li>
-     <h2>@review.Title</h2>
-     @review.PublicationDate.ToLongDateString()
-     <p>
-     
-     </p>
-     <a href='@review.WebUrl'>Original article</a>
-     <em>@review.ReviewType</em>
-     </li>   
-}
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.js" type="text/javascript"></script>    
+@*<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.vsdoc.js" type="text/javascript"></script>*@
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.6/jquery-ui.js" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.raty.js")" type="text/javascript"></script>
 
-</ul>
+<div id="menucontainer">
+    <ul id="menu">
+        <li><span><a href="/review/reviewList/">All</span></a></li>
+        @foreach (var type in Enumeration.GetAll<ReviewTypes>().Where(r => r.ShowInUI))
+        {
+        <li><span><a href="/review/reviewlist/@type.Name">@type.DisplayName </a></span></li>
+        }
+        
+    </ul>
+</div>
+
+<script>
+    
+    $(function () {
+        $("#menucontainer").tabs();
+    });
+    
+</script>

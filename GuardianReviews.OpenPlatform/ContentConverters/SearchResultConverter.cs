@@ -35,6 +35,8 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
             review.PublicationDate = content.WebPublicationDate;
             review.StarRating = content.Fields.StarRating;
             review.Body = content.Fields.Body;
+            review.StandFirst = content.Fields.Standfirst;
+            review.TrailText = content.Fields.TrailText;
             review.Title = content.WebTitle;
             review.WebUrl = content.WebUrl;
         }

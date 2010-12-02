@@ -1,30 +1,18 @@
-﻿#I @"D:\Projects\GuardianReviewsAzure\GuardianReviews.Web\bin"
-#r @"GuardianReviews.NHibernate.dll"
-#r @"NHibernate.dll"
-#r @"NHibernate.Linq.dll"
-#r @"FluentNHibernate.dll"
-#r @"GuardianReviews.Domain.dll"
-#r @"SharpArch.dll"
-
+﻿#load @"D:\Projects\GuardianReviewsAzure\Setup.fsx"
 open GuardianReviews.NHibernate
 open GuardianReviews.NHibernate.Mappings
 open GuardianReviews.Domain.Model
 open SharpArch.Data.NHibernate
 
-//NHibernate setup
-let pathToConfig = @"D:\Projects\GuardianReviewsAzure\GuardianReviews.Web\NHibernate.config"
-let rep = new QueryRepository<GuardianReviews.Domain.Model.Review>()
-let modelGenerator = new AutoPersistenceModelGenerator()
-NHibernateSession.Init(new SimpleSessionStorage(), [|@"D:\Projects\GuardianReviewsAzure\GuardianReviews.Web\bin\GuardianReviews.NHibernate.dll"|], modelGenerator.Generate(), pathToConfig);
-let session = NHibernateSession.GetDefaultSessionFactory().OpenSession()
-
 //Querying
-let results = rep.GetAll()
-results.Count
-let results2 = rep.FindAll(fun(r:Review) -> r.ReviewType.Id = 3)
-results2.Count
-results2 |> Seq.iter (fun r -> printfn "%s" r.Title)
 
+let rep = new QueryRepository<Review>()
+let results2 = rep.FindAll(fun(r:Review) -> r.ReviewType = ReviewTypes.Music)
+results2.Count
+results2 |> Seq.iter (fun r -> printfn "%s %s" r.Title r.ReviewType.DisplayName)
+let rev = results2.Item(0)
+rev.Title
+let results3 = rep.FindAll(fun(r:Review) -> r = rev)
 //Cleanup
 NHibernateSession.CloseAllSessions()
 NHibernateSession.Reset()

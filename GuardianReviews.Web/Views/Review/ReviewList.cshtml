@@ -1,0 +1,32 @@
+﻿@using GuardianReviews.Domain.Model
+@using GuardianReviews.Domain.BaseClasses
+@model List<Review>
+
+@{
+    Layout = null;
+}
+
+<ul id="review-list">
+@foreach (var review in Model)
+{
+     <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+         <h3>@review.Title</h3>
+         <em>@review.PublicationDate.ToLongDateString()</em>
+         <p>@(new HtmlString(review.TrailText))</p>
+         <div class="star-rating-@review.StarRating"></div>
+         <div><em>@review.ReviewType</em></div>
+         <a href='@review.WebUrl'>Original article</a>
+     </li>   
+}
+</ul>
+<script type="text/javascript">
+    for (var i = 1; i < 6; i++) {
+        if ($('.star-rating-' + i).length > 0) {
+            $('.star-rating-' + i).raty({
+                readOnly: true,
+                start: i,
+                path: '/Content/Images'
+            });
+        }
+    }
+</script>

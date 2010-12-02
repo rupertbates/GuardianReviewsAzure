@@ -70,13 +70,15 @@ namespace GuardianReviews.Tests.NHibernate
             {
                 session.Save(i);
             }
-
+            //session.Flush();
             var op = new OpenPlatformSearch();
 
             var fetcher = new ReviewFetcher(op);
             var reviews = fetcher.FetchReviews();
             var repository = new QueryRepository<Review>();
             var nulls = reviews.Where(r => r.ReviewType == null).ToList();
+            nulls.ShouldBeEmpty();
+
             repository.SaveMany(reviews);
             repository.DbContext.CommitChanges();
 

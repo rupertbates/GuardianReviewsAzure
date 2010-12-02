@@ -17,7 +17,7 @@ namespace GuardianReviews.Web.Binders
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             var val = bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
-            return val == null ? DefaultValue : Enumeration.FromDisplayName<T>(val.AttemptedValue);
+            return val == null ? DefaultValue : Enumeration.FromName<T>(val.AttemptedValue);
         }
     }
 }

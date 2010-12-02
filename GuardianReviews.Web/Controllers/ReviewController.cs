@@ -18,15 +18,31 @@ namespace GuardianReviews.Web.Controllers
             _repository = repository;
         }
 
-        public ActionResult Index(ReviewTypes reviewType)
+        public ActionResult Index()
         {
-            var reviews = _repository.FindAll(r => r.ReviewType.DisplayName == reviewType.DisplayName || reviewType == ReviewTypes.Unknown,
+            var reviews = _repository.FindAll(
                 new QueryOptions<Review>
                 {
                     Take=10, 
                     OrderDirection= OrderByDirection.Descending, 
                     OrderBySelector = r => r.PublicationDate
                 });
+            
+            return View(reviews);
+        }
+        public ActionResult ReviewList(ReviewTypes id)
+        {
+            var options = new QueryOptions<Review>
+                              {
+                                  Take = 10,
+                                  OrderDirection = OrderByDirection.Descending,
+                                  OrderBySelector = r => r.PublicationDate
+                              };
+            IList<Review> reviews;
+            if (id == ReviewTypes.Unknown)
+                reviews = _repository.FindAll(r => r.ReviewType.Id != ReviewTypes.Unknown.Id, options);
+            else
+                reviews = _repository.FindAll(r => r.ReviewType.Id == id.Id);
             return View(reviews);
         }
 

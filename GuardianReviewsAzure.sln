@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		GuardianReviews.testsettings = GuardianReviews.testsettings
 		Query.fsx = Query.fsx
+		Setup.fsx = Setup.fsx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianReviews.NHibernate", "GuardianReviews.NHibernate\GuardianReviews.NHibernate.csproj", "{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}"

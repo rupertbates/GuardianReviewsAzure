@@ -7,20 +7,24 @@ namespace GuardianReviews.Domain.Model
     public class MusicTypes : Enumeration
     {
 
-        public static readonly MusicTypes Classical = new MusicTypes(0, "Classical music and opera");
-        public static readonly MusicTypes Electronic = new MusicTypes(1, "Electronic music");
-        public static readonly MusicTypes Jazz = new MusicTypes(2, "Jazz");
-        public static readonly MusicTypes Folk = new MusicTypes(3, "Folk");
-        public static readonly MusicTypes Pop = new MusicTypes(4, "Pop and Rock");
-        public static readonly MusicTypes Urban = new MusicTypes(5, "Urban music");
-        public static readonly MusicTypes World = new MusicTypes(6, "World music");
-        public static readonly MusicTypes Soul = new MusicTypes(7, "Soul");
-        public static readonly MusicTypes DanceMusic = new MusicTypes(8, "Dance music");
-        public static readonly MusicTypes Unknown = new MusicTypes(9, "Unknown");
-        private MusicTypes(int id, string displayName)
+        public static readonly MusicTypes Classical = new MusicTypes(1, "classical", "Classical music and opera");
+        public static readonly MusicTypes Electronic = new MusicTypes(2, "electronic", "Electronic music");
+        public static readonly MusicTypes Jazz = new MusicTypes(3, "Jazz");
+        public static readonly MusicTypes Folk = new MusicTypes(4, "Folk");
+        public static readonly MusicTypes Pop = new MusicTypes(5, "popandrock", "Pop and Rock");
+        public static readonly MusicTypes Urban = new MusicTypes(6, "urban", "Urban music");
+        public static readonly MusicTypes World = new MusicTypes(7, "world", "World music");
+        public static readonly MusicTypes Soul = new MusicTypes(8, "Soul");
+        public static readonly MusicTypes DanceMusic = new MusicTypes(9, "dance", "Dance music");
+        public static readonly MusicTypes Unknown = new MusicTypes(10, "Unknown", "Unknown", false);
+        protected MusicTypes(int id, string name):this(id, name, name, true)
         {
-            Id = id;
-            DisplayName = displayName;
+        }
+        protected MusicTypes(int id, string name, string displayName): this(id, name, displayName, true)
+        {
+        }
+        protected MusicTypes(int id, string name, string displayName, bool showInUI):base(id, name, displayName, showInUI)
+        {
         }
         public MusicTypes()
         {

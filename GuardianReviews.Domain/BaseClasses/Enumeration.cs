@@ -7,20 +7,26 @@ using SharpArch.Core.DomainModel;
 
 namespace GuardianReviews.Domain.BaseClasses
 {
-    public abstract class Enumeration : IComparable
+    public abstract class Enumeration : Entity, IComparable
     {
         protected Enumeration()
         {
         }
-
-        protected Enumeration(int id, string displayName)
+        protected Enumeration(int id, string name):this(id, name, name, true)
+        {
+        }
+        protected Enumeration(int id, string name, string displayName, bool showInUI)
         {
             Id = id;
+            Name = name;
             DisplayName = displayName;
+            ShowInUI = showInUI;
         }
 
-        public virtual int Id { get; set; }
-
+            
+        //public virtual int Id { get; set; }
+        public virtual bool ShowInUI { get; set; }
+        public virtual string Name { get; set; }
         public virtual string DisplayName { get; set; }
 
         public override string ToString()
@@ -77,10 +83,10 @@ namespace GuardianReviews.Domain.BaseClasses
             return matchingItem;
         }
 
-        public static T FromDisplayName<T>(string displayName) where T : Enumeration, new()
+        public static T FromName<T>(string name) where T : Enumeration, new()
         {
-            displayName = displayName.ToLower();
-            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName.ToLower() == displayName);
+            name = name.ToLower();
+            var matchingItem = parse<T, string>(name, "name", item => item.Name.ToLower() == name);
             return matchingItem;
         }
 

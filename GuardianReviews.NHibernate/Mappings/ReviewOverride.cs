@@ -7,7 +7,9 @@ namespace GuardianReviews.NHibernate.Mappings
     {
         public void Override(FluentNHibernate.Automapping.AutoMapping<Review> mapping)
         {
-            mapping.Map(l => l.Body).Length(10000);    
+            mapping.Map(l => l.Body).Length(10000);
+            mapping.Map(r => r.StandFirst).Length(2000);
+            mapping.Map(r => r.TrailText).Length(2000);
         }
 
         
