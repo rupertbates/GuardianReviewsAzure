@@ -83,5 +83,16 @@ namespace GuardianReviews.Tests.NHibernate
             repository.DbContext.CommitChanges();
 
         }
+        [TestMethod]
+        [TestCategory("Live DB")]
+        public void Can_query_by_ReviewType()
+        {
+            var repository = new QueryRepository<Review>();
+            var results = repository.FindAll(r => r.ReviewType == ReviewTypes.Music);
+            results.Count.ShouldNotEqual(0);
+
+        }
+        
+       
     }
 }

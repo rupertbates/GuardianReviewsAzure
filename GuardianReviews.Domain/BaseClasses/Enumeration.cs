@@ -66,6 +66,17 @@ namespace GuardianReviews.Domain.BaseClasses
             return typeMatches && valueMatches;
         }
 
+        public static bool operator ==(Enumeration a, Enumeration b)
+        {
+            return a.Id == b.Id;
+        }
+
+        public static bool operator !=(Enumeration a, Enumeration b)
+        {
+            return !(a == b);
+        }
+
+
         public override int GetHashCode()
         {
             return Id.GetHashCode();
