@@ -55,9 +55,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Binaries\SharpArch.dll</HintPath>
     </Reference>
-    <Reference Include="Should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Binaries\Should.dll</HintPath>
+    <Reference Include="Shouldly">
+      <HintPath>..\Binaries\Testing\Shouldly.dll</HintPath>
     </Reference>
     <Reference Include="StringTemplate, Version=3.0.1.6846, Culture=neutral, PublicKeyToken=beee492b52c41e85, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -82,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\TestEnumeration.cs" />
     <Compile Include="NHibernate\SharpArchTests.cs" />
     <Compile Include="NHibernate\TestDataAccess.cs" />
     <Compile Include="OpenPlatform\TestGetMusicType.cs" />

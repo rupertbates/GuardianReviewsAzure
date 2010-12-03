@@ -10,7 +10,6 @@ using GuardianReviews.NHibernate;
 using GuardianReviews.OpenPlatform;
 using GuardianReviews.OpenPlatform.ContentConverters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Should;
 
 namespace GuardianReviews.Tests.NHibernate
 {

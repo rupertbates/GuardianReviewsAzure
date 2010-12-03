@@ -6,13 +6,14 @@ namespace GuardianReviews.Domain.Model
 {
     public class ReviewTypes : Enumeration
     {
-        public static readonly ReviewTypes Film = new ReviewTypes(1, "Film");
-        public static readonly ReviewTypes Music = new ReviewTypes(2, "Music");
-        public static readonly ReviewTypes Books = new ReviewTypes(3, "Books");
-        public static readonly ReviewTypes Theatre = new ReviewTypes(4, "Theatre");
-        public static readonly ReviewTypes Game = new ReviewTypes(5, "Game");
-        public static readonly ReviewTypes TvAndRadio = new ReviewTypes(6, "TvAndRadio", "Television & Radio");
-        public static readonly ReviewTypes Unknown = new ReviewTypes(7, "Unknown", "Unknown", false);
+        public static readonly ReviewTypes 
+            Film = new ReviewTypes(1, "Film"),
+            Music = new ReviewTypes(2, "Music"),
+            Books = new ReviewTypes(3, "Books"),
+            Theatre = new ReviewTypes(4, "Theatre"),
+            Game = new ReviewTypes(5, "Game"),
+            TvAndRadio = new ReviewTypes(6, "TvAndRadio", "Television & Radio"),
+            Unknown = new ReviewTypes(7, "Unknown", "Unknown", false);
         
         protected ReviewTypes(int id, string name):this(id, name, name, true)
         {

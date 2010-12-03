@@ -30,7 +30,7 @@ namespace GuardianReviews.Web.Controllers
             
             return View(reviews);
         }
-        public ActionResult ReviewList(ReviewTypes id)
+        public ActionResult ReviewList(ReviewTypes reviewType)
         {
             var options = new QueryOptions<Review>
                               {
@@ -39,10 +39,10 @@ namespace GuardianReviews.Web.Controllers
                                   OrderBySelector = r => r.PublicationDate
                               };
             IList<Review> reviews;
-            if (id == ReviewTypes.Unknown)
-                reviews = _repository.FindAll(r => r.ReviewType.Id != ReviewTypes.Unknown.Id, options);
+            if (reviewType == ReviewTypes.Unknown)
+                reviews = _repository.FindAll(r => r.ReviewType != ReviewTypes.Unknown, options);
             else
-                reviews = _repository.FindAll(r => r.ReviewType.Id == id.Id);
+                reviews = _repository.FindAll(r => r.ReviewType == reviewType);
             return View(reviews);
         }
 

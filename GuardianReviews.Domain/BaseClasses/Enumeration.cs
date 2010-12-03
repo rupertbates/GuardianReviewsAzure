@@ -66,8 +66,10 @@ namespace GuardianReviews.Domain.BaseClasses
             return typeMatches && valueMatches;
         }
 
-        public static bool operator ==(Enumeration a, Enumeration b)
+        public static bool operator == (Enumeration a, Enumeration b)
         {
+            if ((object)a == null && (object)b == null) return true;
+            if ((object)a == null || (object)b == null) return false;
             return a.Id == b.Id;
         }
 

@@ -7,16 +7,17 @@ namespace GuardianReviews.Domain.Model
     public class MusicTypes : Enumeration
     {
 
-        public static readonly MusicTypes Classical = new MusicTypes(1, "classical", "Classical music and opera");
-        public static readonly MusicTypes Electronic = new MusicTypes(2, "electronic", "Electronic music");
-        public static readonly MusicTypes Jazz = new MusicTypes(3, "Jazz");
-        public static readonly MusicTypes Folk = new MusicTypes(4, "Folk");
-        public static readonly MusicTypes Pop = new MusicTypes(5, "popandrock", "Pop and Rock");
-        public static readonly MusicTypes Urban = new MusicTypes(6, "urban", "Urban music");
-        public static readonly MusicTypes World = new MusicTypes(7, "world", "World music");
-        public static readonly MusicTypes Soul = new MusicTypes(8, "Soul");
-        public static readonly MusicTypes DanceMusic = new MusicTypes(9, "dance", "Dance music");
-        public static readonly MusicTypes Unknown = new MusicTypes(10, "Unknown", "Unknown", false);
+        public static readonly MusicTypes
+            Classical = new MusicTypes(1, "classical", "Classical music and opera"),
+            Electronic = new MusicTypes(2, "electronic", "Electronic music"),
+            Jazz = new MusicTypes(3, "Jazz"),
+            Folk = new MusicTypes(4, "Folk"),
+            Pop = new MusicTypes(5, "popandrock", "Pop and Rock"),
+            Urban = new MusicTypes(6, "urban", "Urban music"),
+            World = new MusicTypes(7, "world", "World music"),
+            Soul = new MusicTypes(8, "Soul"),
+            DanceMusic = new MusicTypes(9, "dance", "Dance music"),
+            Unknown = new MusicTypes(10, "Unknown", "Unknown", false);
         protected MusicTypes(int id, string name):this(id, name, name, true)
         {
         }

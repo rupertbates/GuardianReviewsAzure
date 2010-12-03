@@ -8,7 +8,7 @@ using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.Domain.Model;
 using GuardianReviews.OpenPlatform;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Should;
+using Shouldly;
 
 namespace GuardianReviews.Tests.OpenPlatform
 {
@@ -22,7 +22,7 @@ namespace GuardianReviews.Tests.OpenPlatform
             var op = new OpenPlatformSearch(new ApiService("ReviewsWithAllFields.json"), "", "");
             var rf = new ReviewFetcher(op);
             var reviews = rf.FetchReviews();
-            reviews.Count().ShouldEqual(50);
+            reviews.Count().ShouldBe(50);
         }
     }
 }

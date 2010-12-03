@@ -7,7 +7,7 @@ using Guardian.OpenPlatform.Results.Entities;
 using GuardianReviews.Domain.Model;
 using GuardianReviews.OpenPlatform.ContentConverters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Should;
+using Shouldly;
 using Guardian.OpenPlatform.Tests.Fakes;
 namespace GuardianReviews.Tests.OpenPlatform
 {
@@ -24,7 +24,7 @@ namespace GuardianReviews.Tests.OpenPlatform
                                                  new Tag {Id = "books/books"}
                                              }
                               };
-            content.GetReviewType().ShouldEqual(ReviewTypes.Books);
+            content.GetReviewType().ShouldBe(ReviewTypes.Books);
         }
 
         [TestMethod]
@@ -40,20 +40,20 @@ namespace GuardianReviews.Tests.OpenPlatform
             //load some reviews from a text file using a fake
             var op = new OpenPlatformSearch(new ApiService("Reviews2.json"), "", "");
             var results = op.ContentSearch(new ContentSearchParameters());
-            results.Results.Count().ShouldEqual(50);
+            results.Results.Count().ShouldBe(50);
             
             
             var content = results.Results
                 .Where(c => c.ApiUrl == "http://content.guardianapis.com/stage/2010/nov/24/the-invisible-man-review").First();
-            content.GetReviewType().ShouldEqual(ReviewTypes.Theatre);
+            content.GetReviewType().ShouldBe(ReviewTypes.Theatre);
             
             content = results.Results
                 .Where(c => c.ApiUrl == "http://content.guardianapis.com/technology/gamesblog/2010/nov/22/we-sing-robbie-williams-review").First();
-            content.GetReviewType().ShouldEqual(ReviewTypes.Game);
+            content.GetReviewType().ShouldBe(ReviewTypes.Game);
             
             content = results.Results
                 .Where(c => c.ApiUrl == "http://content.guardianapis.com/tv-and-radio/2010/nov/24/arise-black-man-peter-tosh-review").First();
-            content.GetReviewType().ShouldEqual(ReviewTypes.TvAndRadio);
+            content.GetReviewType().ShouldBe(ReviewTypes.TvAndRadio);
 
             //var multiples = results.Results.Where(c => converter.GetReviewTypesFromTag(c).Count > 1);
             //foreach (var multiple in multiples)

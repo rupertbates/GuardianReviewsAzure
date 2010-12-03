@@ -14,7 +14,7 @@ using NHibernate.Tool.hbm2ddl;
 using SharpArch.Data.NHibernate;
 using SharpArch.Testing.NHibernate;
 using Guardian.OpenPlatform;
-using Should;
+using Shouldly;
 namespace GuardianReviews.Tests.NHibernate
 {
     [TestClass]
@@ -26,7 +26,7 @@ namespace GuardianReviews.Tests.NHibernate
         {
             string[] mappingAssemblies = RepositoryTestsHelper.GetMappingAssemblies();
             const string pathToConfig = "../../../../../../GuardianReviews.Web/NHibernate.config";
-            File.Exists(pathToConfig).ShouldBeTrue();
+            File.Exists(pathToConfig).ShouldBe(true);
             _configuration = NHibernateSession.Init(new SimpleSessionStorage(), mappingAssemblies,
                                    new AutoPersistenceModelGenerator().Generate(),
                                    pathToConfig);
@@ -77,7 +77,7 @@ namespace GuardianReviews.Tests.NHibernate
             var reviews = fetcher.FetchReviews();
             var repository = new QueryRepository<Review>();
             var nulls = reviews.Where(r => r.ReviewType == null).ToList();
-            nulls.ShouldBeEmpty();
+            nulls.Count.ShouldBe(0);
 
             repository.SaveMany(reviews);
             repository.DbContext.CommitChanges();
@@ -89,7 +89,10 @@ namespace GuardianReviews.Tests.NHibernate
         {
             var repository = new QueryRepository<Review>();
             var results = repository.FindAll(r => r.ReviewType == ReviewTypes.Music);
-            results.Count.ShouldNotEqual(0);
+            results.Count.ShouldBeGreaterThan(0);
+
+            var results2 = repository.FindAll(r => r.ReviewType.Id == ReviewTypes.Music.Id);
+            results2.Count.ShouldBe(results.Count);
 
         }
         
