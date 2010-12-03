@@ -9,7 +9,7 @@
 <ul id="review-list">
 @foreach (var review in Model)
 {
-     <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+     <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active @review.ReviewType.Name">
          <h3>@review.Title</h3>
          <em>@review.PublicationDate.ToLongDateString()</em>
          <p>@(new HtmlString(review.TrailText))</p>

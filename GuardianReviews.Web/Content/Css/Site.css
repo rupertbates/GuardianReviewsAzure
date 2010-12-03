@@ -308,14 +308,38 @@ ul#review-list
 {
     float:left;
     clear:left;
-    max-width:80em;
+    max-width:50em;
 }
 ul#review-list li
 {
-    padding:10px;
+    padding: 10px 10px 10px 10px;
     margin-bottom:5px;
     list-style:none;
     border:1px solid gray;
+}
+ul#review-list h3
+{
+    margin-left: 70px;
+}
+ul#review-list li.Film
+{
+    background: url(/content/images/film.png) no-repeat;
+}
+ul#review-list li.Music
+{
+    background: url(/content/images/music.png) no-repeat;
+}
+ul#review-list li.TvAndRadio
+{
+    background: url(/content/images/tvandradio.png) no-repeat;
+}
+ul#review-list li.Theatre
+{
+    background: url(/content/images/theatre.png) no-repeat;
+}
+ul#review-list li.Game
+{
+    background: url(/content/images/game.png) no-repeat;
 }
 /* JQuery UI tabs */
 .ui-tabs .ui-tabs-hide {
