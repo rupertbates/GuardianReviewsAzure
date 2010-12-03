@@ -26,12 +26,17 @@ namespace GuardianReviews.Web.Controllers
                 OrderDirection = OrderByDirection.Descending,
                 OrderBySelector = r => r.PublicationDate
             };
+
             IList<Review> reviews;
             if (reviewType == ReviewTypes.Unknown)
                 reviews = _repository.FindAll(r => r.ReviewType != ReviewTypes.Unknown, options);
             else
-                reviews = _repository.FindAll(r => r.ReviewType == reviewType);
+                reviews = _repository.FindAll(r => r.ReviewType == reviewType, options);
             return View(reviews);
+        }
+        public ActionResult View(int id)
+        {
+            return View(_repository.Get(id));
         }
         
     }
