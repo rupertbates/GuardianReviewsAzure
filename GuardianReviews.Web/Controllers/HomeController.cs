@@ -10,6 +10,12 @@ namespace GuardianReviews.Web.Controllers
     {
         public ActionResult Index()
         {
+            if (Request.AcceptTypes != null && Request.AcceptTypes.Contains("application/xrds+xml"))
+            {
+                Response.ContentType = "application/xrds+xml";
+                ViewData["OPIdentifier"] = true;
+                return View("Xrds");
+            }
             ViewModel.Message = "Welcome to ASP.NET MVC!";
 
             return View();

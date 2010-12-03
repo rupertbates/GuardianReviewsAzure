@@ -1,4 +1,5 @@
 using Castle.Windsor;
+using GuardianReviews.ApplicationServices;
 using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.NHibernate;
 using SharpArch.Core.PersistenceSupport.NHibernate;
@@ -18,7 +19,7 @@ namespace GuardianReviews.Web.Castle
             AddGenericRepositoriesTo(container);
             //AddCustomRepositoriesTo(container);
             //AddApplicationServicesTo(container);
-
+            container.AddComponent("OpenId", typeof (IOpenIdService), typeof (DebugOpenIdService));
             container.AddComponent("validator",
                 typeof(IValidator), typeof(Validator));
         }

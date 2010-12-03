@@ -13,6 +13,7 @@ namespace GuardianReviews.Domain.Interfaces
         IList<T> FindAll(QueryOptions<T> options);
         IList<T> FindAll(Func<T, bool> predicate);
         IList<T> FindAll(Func<T, bool> predicate, QueryOptions<T> options);
+        T FindOne(Func<T, bool> predicate);
         void SaveMany(IEnumerable<T> entities);
     }
 }

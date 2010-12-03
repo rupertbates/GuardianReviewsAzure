@@ -31,6 +31,18 @@ namespace GuardianReviews.NHibernate
                                            .Where(predicate).AsQueryable(),
                                        options);
         }
+        public T FindOne(Func<T, bool> predicate)
+        {
+            IList<T> foundList = FindAll(predicate);
+
+            if (foundList.Count > 1)
+                throw new NonUniqueResultException(foundList.Count);
+        
+            if (foundList.Count == 1)
+                return foundList[0];
+
+            return default(T);
+        }
         protected IList<T> ExecuteQueryOptions(IQueryable<T> query, QueryOptions<T> options)
         {
             if (options == null)

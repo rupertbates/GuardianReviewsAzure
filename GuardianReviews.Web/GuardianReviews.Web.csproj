@@ -111,6 +111,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.raty.js" />
     <Content Include="Scripts\jquery.raty.min.js" />
+    <None Include="Views\Home\xrds.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -190,6 +192,10 @@
     <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GuardianReviews.ApplicationServices\GuardianReviews.ApplicationServices.csproj">
+      <Project>{562B28BB-BFDE-4F20-9191-2A40988C9A79}</Project>
+      <Name>GuardianReviews.ApplicationServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
       <Project>{588B4672-6EC9-405E-81EF-410FD24D4D82}</Project>
       <Name>GuardianReviews.Domain</Name>
