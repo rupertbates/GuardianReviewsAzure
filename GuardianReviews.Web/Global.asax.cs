@@ -36,11 +36,6 @@ namespace GuardianReviews.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
-                "ReviewType", // Route name
-                "review/reviewlist/{reviewType}", // URL with parameters
-                new { controller = "Review", action = "ReviewList", reviewType = UrlParameter.Optional } // Parameter defaults
-            );
-            routes.MapRoute(
                 "Reviews", // Route name
                 "review/{reviewType}", // URL with parameters
                 new { controller = "Review", action = "Index", reviewType = UrlParameter.Optional } // Parameter defaults

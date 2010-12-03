@@ -36,21 +36,9 @@
 				<input id="openid_submit" type="submit" value="Sign-In"/>
 			</div>
 			<noscript>
-			<p>OpenID is service that allows you to log-on to many different websites using a single indentity.
+			<p>OpenID is service that allows you to log-on to many different websites using a single identity.
 			Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>
 			</noscript>
 	</fieldset>
 </form>
 <!-- /Simple OpenID Selector -->
-@*
-<p>You must log in before entering the Members Area: </p>
-<form action="Authenticate?ReturnUrl=@HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"])" method="post">
-<label for="openid_identifier">OpenID: </label>
-<input id="openid_identifier" name="openid_identifier" size="40" />
-<input type="submit" value="Login" />
-</form>
-
-<script type="text/javascript">
-    document.getElementById("openid_identifier").focus();
-</script>
-*@

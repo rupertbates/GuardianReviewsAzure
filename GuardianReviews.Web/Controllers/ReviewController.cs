@@ -17,27 +17,15 @@ namespace GuardianReviews.Web.Controllers
         {
             _repository = repository;
         }
-
-        public ActionResult Index()
-        {
-            var reviews = _repository.FindAll(
-                new QueryOptions<Review>
-                {
-                    Take=10, 
-                    OrderDirection= OrderByDirection.Descending, 
-                    OrderBySelector = r => r.PublicationDate
-                });
-            
-            return View(reviews);
-        }
-        public ActionResult ReviewList(ReviewTypes reviewType)
+        
+        public ActionResult Index(ReviewTypes reviewType)
         {
             var options = new QueryOptions<Review>
-                              {
-                                  Take = 10,
-                                  OrderDirection = OrderByDirection.Descending,
-                                  OrderBySelector = r => r.PublicationDate
-                              };
+            {
+                Take = 10,
+                OrderDirection = OrderByDirection.Descending,
+                OrderBySelector = r => r.PublicationDate
+            };
             IList<Review> reviews;
             if (reviewType == ReviewTypes.Unknown)
                 reviews = _repository.FindAll(r => r.ReviewType != ReviewTypes.Unknown, options);
@@ -45,6 +33,6 @@ namespace GuardianReviews.Web.Controllers
                 reviews = _repository.FindAll(r => r.ReviewType == reviewType);
             return View(reviews);
         }
-
+        
     }
 }
