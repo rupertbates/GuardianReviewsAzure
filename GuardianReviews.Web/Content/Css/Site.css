@@ -3,28 +3,22 @@ The base color for this template is #5c87b2. If you'd like
 to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
-body
+html 
 {
-    background-color: #666666;
-    font-size: .75em;
-    font-family: Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-
-}
-html {
 -moz-background-clip:border;
 -moz-background-inline-policy:continuous;
 -moz-background-origin:padding;
 background:#FFF url(/content/images/html_bg.png) repeat-x scroll 0 0;
 overflow-y:scroll;
 }
+
 body {
 -moz-background-clip:border;
 -moz-background-inline-policy:continuous;
 -moz-background-origin:padding;
 background:transparent;
-font-family:"Arial","Helvetica","Verdana","sans-serif";
-font-size:10px;
+font-family: Verdana, Helvetica, Sans-Serif;
+font-size: .75em;
 margin:0;
 min-height:100%;
 padding:0 0 20px;
@@ -111,6 +105,11 @@ page width. Or, you can specify an exact pixel width. */
     margin-bottom: 0px;
     color: #000;
     padding: 0;
+}
+
+#main
+{
+    clear:both;
 }
 
 #header h1

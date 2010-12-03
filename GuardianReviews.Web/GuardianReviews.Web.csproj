@@ -115,6 +115,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Css\openid.css" />
     <Content Include="Content\Css\Site.css" />
     <Content Include="Content\Css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\Css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -150,6 +151,8 @@
     <Content Include="Scripts\jquery.raty.js" />
     <Content Include="Scripts\jquery.raty.min.js" />
     <None Include="Views\Home\xrds.cshtml" />
+    <Content Include="Scripts\openid-jquery-en.js" />
+    <Content Include="Scripts\openid-jquery.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -169,12 +172,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\MicrosoftAjax.js" />
-    <Content Include="Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\ChangePassword.cshtml" />
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
