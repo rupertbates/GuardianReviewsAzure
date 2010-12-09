@@ -22,7 +22,7 @@ namespace GuardianReviews.Web.Controllers
         {
             var options = new QueryOptions<Review>
             {
-                Take = 10,
+                Take = 12,
                 OrderDirection = OrderByDirection.Descending,
                 OrderBySelector = r => r.PublicationDate
             };

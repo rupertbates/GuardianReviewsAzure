@@ -308,12 +308,17 @@ ul#review-list
 {
     float:left;
     clear:left;
-    max-width:50em;
+    max-width:1000px;
+    padding:0 10px;
 }
 ul#review-list li
 {
+    display:inline;
+    float:left;
     padding: 10px 10px 10px 10px;
-    margin-bottom:5px;
+    margin:5px;
+    width:300px;
+    height:305px;
     list-style:none;
     border:1px solid gray;
 }
@@ -340,6 +345,10 @@ ul#review-list li.Theatre
 ul#review-list li.Game
 {
     background: url(/content/images/game.png) no-repeat;
+}
+ul#review-list li.Game
+{
+    background: url(/content/images/books.png) no-repeat;
 }
 /* JQuery UI tabs */
 .ui-tabs .ui-tabs-hide {

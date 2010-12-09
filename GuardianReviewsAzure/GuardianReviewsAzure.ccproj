@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,13 +35,6 @@
     <ServiceConfiguration Include="ServiceConfiguration.cscfg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GuardianReviews.FetchReviewsService\GuardianReviews.FetchReviewsService.csproj">
-      <Name>GuardianReviews.FetchReviewsService</Name>
-      <Project>{cf1eb8e8-65cf-49f4-8320-78ffe9887438}</Project>
-      <Private>True</Private>
-      <RoleType>Worker</RoleType>
-      <RoleName>GuardianReviews.FetchReviewsService</RoleName>
-    </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.Web\GuardianReviews.Web.csproj">
       <Name>GuardianReviews.Web</Name>
       <Project>{cf22651e-ae2d-4cc8-b93a-e1c182c72eca}</Project>

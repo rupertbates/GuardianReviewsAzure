@@ -1,3 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DeploymentBuildOnly>False</DeploymentBuildOnly>
+    <DeploymentAccountName>Work credentials</DeploymentAccountName>
+    <DeploymentHostedService>reviewqueue</DeploymentHostedService>
+    <DeploymentHostedServiceLabel>ReviewQueue</DeploymentHostedServiceLabel>
+    <DeploymentSlot>Production</DeploymentSlot>
+    <DeploymentIncludeIntellitrace>False</DeploymentIncludeIntellitrace>
+    <DeploymentStorageService>guardianstorage</DeploymentStorageService>
+    <DeploymentStorageServiceLabel>guardianstorage</DeploymentStorageServiceLabel>
+    <DeploymentLabel>GuardianReviewsAzure - 09/12/2010 17:02:35</DeploymentLabel>
+    <DeploymentPromptBeforeDeleting>True</DeploymentPromptBeforeDeleting>
+    <DeploymentIsExpanded>False</DeploymentIsExpanded>
+  </PropertyGroup>
 </Project>

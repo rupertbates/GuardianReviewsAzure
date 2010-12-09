@@ -7,8 +7,8 @@ namespace GuardianReviews.NHibernate.Mappings.Conventions
         public void Apply(FluentNHibernate.Conventions.Instances.IIdentityInstance instance)
         {
             instance.Column("Id");
-            instance.UnsavedValue("0");
-            instance.GeneratedBy.HiLo("1000");
+            //instance.UnsavedValue("0");
+            //instance.GeneratedBy.HiLo("1000");
         }
     }
 }

@@ -6,12 +6,7 @@
     </InputEndpoints>
     <ConfigurationSettings>
       <Setting name="DiagnosticsConnectionString" />
-      <Setting name="DataConnectionString" />
     </ConfigurationSettings>
+    
   </WebRole>
-  <WorkerRole name="GuardianReviews.FetchReviewsService">
-    <ConfigurationSettings>
-      <Setting name="DiagnosticsConnectionString" />
-    </ConfigurationSettings>
-  </WorkerRole>
 </ServiceDefinition>

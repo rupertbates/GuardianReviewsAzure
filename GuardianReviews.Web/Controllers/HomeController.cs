@@ -25,14 +25,12 @@ namespace GuardianReviews.Web.Controllers
             var reviews = _repository.FindAll(
                 new QueryOptions<Review>
                 {
-                    Take = 10,
+                    Take = 12,
                     OrderDirection = OrderByDirection.Descending,
                     OrderBySelector = r => r.PublicationDate
                 });
 
             return View(reviews);
-
-            return View();
         }
         /// <summary>
         /// Handles relying party discovery per OpenID 2.0.

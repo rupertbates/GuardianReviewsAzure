@@ -1,16 +1,10 @@
 <?xml version="1.0"?>
 <ServiceConfiguration serviceName="GuardianReviewsAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
   <Role name="GuardianReviews.Web">
-    <Instances count="1" />
+    <Instances count="2" />
     <ConfigurationSettings>
-      <Setting name="DiagnosticsConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DiagnosticsConnectionString" value="DefaultEndpointsProtocol=https;AccountName=guardianstorage;AccountKey=MaAAb2xEvqA4lrkgH4bPon6Kyr3RvlVbJLUMDsaVQZt7jWK4AqocDUd7NNcnnpmk6k1+YxvOq5vTkFw9XtPOWA==" />
     </ConfigurationSettings>
-  </Role>
-  <Role name="GuardianReviews.FetchReviewsService">
-    <Instances count="1" />
-    <ConfigurationSettings>
-      <Setting name="DiagnosticsConnectionString" value="UseDevelopmentStorage=true" />
-    </ConfigurationSettings>
+    
   </Role>
 </ServiceConfiguration>

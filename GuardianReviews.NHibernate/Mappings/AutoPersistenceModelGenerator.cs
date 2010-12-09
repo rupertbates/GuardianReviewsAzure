@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Conventions;
 using GuardianReviews.Domain.Model;
@@ -18,6 +19,10 @@ namespace GuardianReviews.NHibernate.Mappings
 
         public AutoPersistenceModel Generate()
         {
+            return AutoMap.Assemblies(new AutomappingConfiguration(), new[] { Assembly.GetAssembly(typeof(Review)), Assembly.GetAssembly(typeof(AutomappingConfiguration)) })
+                .Conventions.Setup(GetConventions())
+                .UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
+
             return AutoMap.AssemblyOf<Review>(new AutomappingConfiguration())
                 .Conventions.Setup(GetConventions())
                 //.IgnoreBase<Entity>()
@@ -31,11 +36,11 @@ namespace GuardianReviews.NHibernate.Mappings
         {
             return c =>
             {
-                //c.Add<ForeignKeyConvention>();
+                c.Add<ForeignKeyConvention>();
                 c.Add<HasManyConvention>();
                 c.Add<HasManyToManyConvention>();
                 c.Add<ManyToManyTableNameConvention>();
-                //c.Add<PrimaryKeyConvention>();
+                c.Add<PrimaryKeyConvention>();
                 c.Add<ReferenceConvention>();
                 c.Add<TableNameConvention>();
                 c.Add<JoinedSubclassTableNameConvention>();
