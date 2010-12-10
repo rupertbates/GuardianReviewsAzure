@@ -6,7 +6,9 @@
     </InputEndpoints>
     <ConfigurationSettings>
       <Setting name="DiagnosticsConnectionString" />
+      <Setting name="UseOpenId" />
     </ConfigurationSettings>
-    
+    <Certificates>
+    </Certificates>
   </WebRole>
 </ServiceDefinition>

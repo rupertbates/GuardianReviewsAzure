@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using FluentNHibernate.Automapping.Alterations;
-using KableDirect.Ted.Reports.Model;
+using GuardianReviews.Domain.Model;
 
-namespace KableDirect.Ted.Reports.Database.Mappings
+namespace GuardianReviews.NHibernate.Mappings
 {
     public class LogOverride : IAutoMappingOverride<Log>
     {
@@ -13,6 +9,7 @@ namespace KableDirect.Ted.Reports.Database.Mappings
 
         public void Override(FluentNHibernate.Automapping.AutoMapping<Log> mapping)
         {
+            mapping.Table("Log");
             mapping.Map(l => l.Context).Length(512);
             mapping.Map(l => l.Level).Length(512);
             mapping.Map(l => l.Logger).Length(512);

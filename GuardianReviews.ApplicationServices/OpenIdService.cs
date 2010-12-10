@@ -10,6 +10,7 @@ using DotNetOpenAuth.OpenId.Extensions.SimpleRegistration;
 using DotNetOpenAuth.OpenId.RelyingParty;
 using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.Domain.Model;
+using GuardianReviews.Logging;
 
 namespace GuardianReviews.ApplicationServices
 {
@@ -25,12 +26,13 @@ namespace GuardianReviews.ApplicationServices
 
         public ActionResult Authenticate(string openIdIdentifier, string returnUrl)
         {
+            Logs.OpenIdLog.DebugFormat("Attempting login with identifier {0} and returnUrl {1}", openIdIdentifier, returnUrl);
             var response = _openId.GetResponse();
             
-            if (response == null)
+            if (response == null) //We have just come here from the login page
                 return DoOpenIdLogin(openIdIdentifier);
             
-            return ProcessLoginResult(response, returnUrl);
+            return ProcessLoginResult(response, returnUrl); //we are returning from the OpenId provider
         }
         protected ActionResult DoOpenIdLogin(string openIdIdentifier)
         {
@@ -44,13 +46,14 @@ namespace GuardianReviews.ApplicationServices
                 request.AddExtension(new ClaimsRequest
                                          {
                                              Email = DemandLevel.Require, 
-                                             FullName = DemandLevel.Request, 
+                                             FullName = DemandLevel.Require, 
                                              PostalCode = DemandLevel.Request
                                          });//TODO: set a policy url
                 return request.RedirectingResponse.AsActionResult();
             }
             catch (ProtocolException ex)
             {
+                Logs.OpenIdLog.Error("Protocol exception in DoOpenIdLogin", ex);
                 return LoginView(ex.Message);
             }
         }
@@ -59,8 +62,8 @@ namespace GuardianReviews.ApplicationServices
             switch (response.Status)
             {
                 case AuthenticationStatus.Authenticated:
-                    FormsAuthentication.SetAuthCookie(response.ClaimedIdentifier, false);
-                    ProcessAuthenticatedUser(response);
+                    var user = ProcessAuthenticatedUser(response);
+                    FormsAuthentication.SetAuthCookie(user.Email, false);
                     if (!string.IsNullOrEmpty(returnUrl))
                         return Redirect(returnUrl);
                     return RedirectToAction("Index", "Home");
@@ -72,11 +75,11 @@ namespace GuardianReviews.ApplicationServices
             }
             return new EmptyResult();
         }
-        protected void ProcessAuthenticatedUser(IAuthenticationResponse response)
+        protected User ProcessAuthenticatedUser(IAuthenticationResponse response)
         {
             var user = _repository.FindOne(u => u.ClaimedIdentifier == response.ClaimedIdentifier);
             if(user != null)
-                return;
+                return user;
 
             user = new User
                        {
@@ -93,6 +96,7 @@ namespace GuardianReviews.ApplicationServices
                 user.PostalCode = extensions.PostalCode;
             }
             _repository.SaveOrUpdate(user);
+            return user;
         }
         protected ActionResult LoginView(string message)
         {

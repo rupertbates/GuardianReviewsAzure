@@ -37,14 +37,15 @@ namespace GuardianReviews.ApplicationServices
             var user = _repository.FindOne(u => u.ClaimedIdentifier == openIdIdentifier);
             if (user != null)
                 return;
-            
+
             user = new User
-            {
-                ClaimedIdentifier = openIdIdentifier,
-                FriendlyIdentifier = openIdIdentifier,
-                OpenIdProvider = "debug",
-                OpenIdProviderVersion = "1.0"
-            };
+                       {
+                           ClaimedIdentifier = openIdIdentifier,
+                           FriendlyIdentifier = openIdIdentifier,
+                           Email = openIdIdentifier + "@debug.com",
+                           OpenIdProvider = "debug",
+                           OpenIdProviderVersion = "1.0"
+                       };
             _repository.SaveOrUpdate(user);
         }
     }

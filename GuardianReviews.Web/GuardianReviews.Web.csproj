@@ -32,6 +32,29 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stage|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -88,6 +111,9 @@
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.WebPages">
       <Private>True</Private>
     </Reference>
@@ -106,8 +132,12 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -164,9 +194,97 @@
     <Content Include="Content\Css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="Content\Css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\Css\ui-lightness\jquery-ui-1.8.6.custom.css" />
+    <Content Include="Content\Images\body_bg.jpg" />
+    <Content Include="Content\Images\books.png" />
+    <Content Include="Content\Images\film.png" />
+    <Content Include="Content\Images\game.png" />
+    <Content Include="Content\Images\html_bg.png" />
+    <Content Include="Content\Images\music.png" />
+    <Content Include="Content\Images\OpenId\images.large\aol.gif" />
+    <Content Include="Content\Images\OpenId\images.large\facebook.gif" />
+    <Content Include="Content\Images\OpenId\images.large\google.gif" />
+    <Content Include="Content\Images\OpenId\images.large\myopenid.gif" />
+    <Content Include="Content\Images\OpenId\images.large\openid.gif" />
+    <Content Include="Content\Images\OpenId\images.large\rambler.gif" />
+    <Content Include="Content\Images\OpenId\images.large\verisign.gif" />
+    <Content Include="Content\Images\OpenId\images.large\yahoo.gif" />
+    <Content Include="Content\Images\OpenId\images.large\yandex.gif" />
+    <Content Include="Content\Images\OpenId\images.small\aol.ico" />
+    <Content Include="Content\Images\OpenId\images.small\aol.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\aol.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\blogger.ico" />
+    <Content Include="Content\Images\OpenId\images.small\blogger.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\blogger.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\claimid.ico" />
+    <Content Include="Content\Images\OpenId\images.small\claimid.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\claimid.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\clickpass.ico" />
+    <Content Include="Content\Images\OpenId\images.small\clickpass.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\clickpass.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\facebook.ico" />
+    <Content Include="Content\Images\OpenId\images.small\facebook.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\facebook.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\flickr.ico" />
+    <Content Include="Content\Images\OpenId\images.small\flickr.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\flickr.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\google.ico" />
+    <Content Include="Content\Images\OpenId\images.small\google.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\google.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\google_profile.ico" />
+    <Content Include="Content\Images\OpenId\images.small\google_profile.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\google_profile.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\launchpad.ico" />
+    <Content Include="Content\Images\OpenId\images.small\launchpad.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\launchpad.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\linkedin.ico" />
+    <Content Include="Content\Images\OpenId\images.small\linkedin.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\linkedin.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\livejournal.ico" />
+    <Content Include="Content\Images\OpenId\images.small\livejournal.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\livejournal.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\myopenid.ico" />
+    <Content Include="Content\Images\OpenId\images.small\myopenid.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\myopenid.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\openid.ico" />
+    <Content Include="Content\Images\OpenId\images.small\openid.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\openid.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\rambler.ico" />
+    <Content Include="Content\Images\OpenId\images.small\rambler.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\rambler.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\technorati.ico" />
+    <Content Include="Content\Images\OpenId\images.small\technorati.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\technorati.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\twitter.ico" />
+    <Content Include="Content\Images\OpenId\images.small\twitter.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\twitter.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\verisign.ico" />
+    <Content Include="Content\Images\OpenId\images.small\verisign.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\verisign.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\vidoop.ico" />
+    <Content Include="Content\Images\OpenId\images.small\vidoop.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\vidoop.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\wordpress.ico" />
+    <Content Include="Content\Images\OpenId\images.small\wordpress.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\wordpress.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\yahoo.ico" />
+    <Content Include="Content\Images\OpenId\images.small\yahoo.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\yahoo.ico.png" />
+    <Content Include="Content\Images\OpenId\images.small\yandex.ico" />
+    <Content Include="Content\Images\OpenId\images.small\yandex.ico.gif" />
+    <Content Include="Content\Images\OpenId\images.small\yandex.ico.png" />
+    <Content Include="Content\Images\OpenId\images\openid-inputicon.gif" />
+    <Content Include="Content\Images\OpenId\images\openid-providers-en.png" />
+    <Content Include="Content\Images\star-half.png" />
+    <Content Include="Content\Images\star-off.png" />
+    <Content Include="Content\Images\star-on.png" />
+    <Content Include="Content\Images\theatre.png" />
+    <Content Include="Content\Images\tvandradio.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.raty.js" />
     <Content Include="Scripts\jquery.raty.min.js" />
+    <Content Include="Web.Stage.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
     <None Include="Views\Home\xrds.cshtml" />
     <Content Include="Scripts\openid-jquery-en.js" />
     <Content Include="Scripts\openid-jquery.js" />
@@ -201,10 +319,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Review\View.cshtml" />
+    <Content Include="Web.Azure.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\OpenId\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GuardianReviews.ApplicationServices\GuardianReviews.ApplicationServices.csproj">
@@ -214,6 +334,10 @@
     <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">
       <Project>{588B4672-6EC9-405E-81EF-410FD24D4D82}</Project>
       <Name>GuardianReviews.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuardianReviews.Logging\GuardianReviews.Logging.csproj">
+      <Project>{FBC46A80-8933-4474-B008-F790C0369514}</Project>
+      <Name>GuardianReviews.Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\GuardianReviews.NHibernate\GuardianReviews.NHibernate.csproj">
       <Project>{E5AC9143-7DCA-4B18-9A90-BEC0AAB996D1}</Project>

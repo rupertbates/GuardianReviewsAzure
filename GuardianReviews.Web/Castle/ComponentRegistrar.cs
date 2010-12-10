@@ -19,7 +19,8 @@ namespace GuardianReviews.Web.Castle
             AddGenericRepositoriesTo(container);
             //AddCustomRepositoriesTo(container);
             //AddApplicationServicesTo(container);
-            container.AddComponent("OpenId", typeof (IOpenIdService), typeof (DebugOpenIdService));
+            
+            container.AddComponent("OpenId", typeof (IOpenIdService), typeof (OpenIdService));
             container.AddComponent("validator",
                 typeof(IValidator), typeof(Validator));
         }

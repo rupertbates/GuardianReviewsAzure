@@ -9,8 +9,8 @@
     <DeploymentIncludeIntellitrace>False</DeploymentIncludeIntellitrace>
     <DeploymentStorageService>guardianstorage</DeploymentStorageService>
     <DeploymentStorageServiceLabel>guardianstorage</DeploymentStorageServiceLabel>
-    <DeploymentLabel>GuardianReviewsAzure - 09/12/2010 17:02:35</DeploymentLabel>
+    <DeploymentLabel>GuardianReviewsAzure - 10/12/2010 16:35:03</DeploymentLabel>
     <DeploymentPromptBeforeDeleting>True</DeploymentPromptBeforeDeleting>
-    <DeploymentIsExpanded>False</DeploymentIsExpanded>
+    <DeploymentIsExpanded>True</DeploymentIsExpanded>
   </PropertyGroup>
 </Project>
