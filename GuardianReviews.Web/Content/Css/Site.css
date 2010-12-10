@@ -21,7 +21,7 @@ font-family: Verdana, Helvetica, Sans-Serif;
 font-size: .75em;
 margin:0;
 min-height:100%;
-padding:0 0 20px;
+padding:0;
 }
 a:link
 {
@@ -46,6 +46,10 @@ p, ul
 {
     margin-bottom: 20px;
     line-height: 1.6em;
+}
+img
+{
+    border-style:none;
 }
 
 /* HEADINGS   

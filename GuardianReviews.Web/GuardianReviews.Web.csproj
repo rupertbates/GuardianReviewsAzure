@@ -199,6 +199,8 @@
     <Content Include="Content\Images\film.png" />
     <Content Include="Content\Images\game.png" />
     <Content Include="Content\Images\html_bg.png" />
+    <Content Include="Content\Images\Logo.gif" />
+    <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\music.png" />
     <Content Include="Content\Images\OpenId\images.large\aol.gif" />
     <Content Include="Content\Images\OpenId\images.large\facebook.gif" />
