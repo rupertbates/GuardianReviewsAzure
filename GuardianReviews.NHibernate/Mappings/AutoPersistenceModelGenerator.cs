@@ -23,11 +23,11 @@ namespace GuardianReviews.NHibernate.Mappings
                 .Conventions.Setup(GetConventions())
                 .UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
 
-            return AutoMap.AssemblyOf<Review>(new AutomappingConfiguration())
-                .Conventions.Setup(GetConventions())
-                //.IgnoreBase<Entity>()
-                //.IgnoreBase(typeof(EntityWithTypedId<>))
-                .UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
+            //return AutoMap.AssemblyOf<Review>(new AutomappingConfiguration())
+            //    .Conventions.Setup(GetConventions())
+            //    //.IgnoreBase<Entity>()
+            //    //.IgnoreBase(typeof(EntityWithTypedId<>))
+            //    .UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
         }
 
         #endregion

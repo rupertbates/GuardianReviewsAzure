@@ -1,4 +1,4 @@
-﻿#load @"D:\Projects\GuardianReviewsAzure\Setup.fsx"
+#load @"D:\Projects\GuardianReviewsAzure\Setup.fsx"
 open GuardianReviews.NHibernate
 open GuardianReviews.NHibernate.Mappings
 open GuardianReviews.Domain.Model

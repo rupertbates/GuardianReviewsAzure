@@ -1,0 +1,10 @@
+﻿@model User
+
+<h3>Show me the following types of reviews</h3>
+<ul>
+    @foreach (var reviewType in Enumeration.GetAll<ReviewTypes>().Where(r => r.ShowInUI))
+    {
+        @reviewType.DisplayName @Html.CheckBox(reviewType.Name, Model.IsSubscribedTo(reviewType))
+    }
+</ul>
+

@@ -1,8 +1,10 @@
 using System;
+using Newtonsoft.Json;
 using SharpArch.Core.DomainModel;
 
 namespace GuardianReviews.Domain.Model
 {
+    [JsonObject(MemberSerialization.OptOut)]
     public class Review : Entity
     {
         protected Review()
@@ -13,6 +15,7 @@ namespace GuardianReviews.Domain.Model
             ReviewType = type;
         }
         //public virtual int Id { get; protected set; }
+        
         public virtual string Title { get; set; }
         public virtual string StandFirst { get; set; }
         public virtual string TrailText { get; set; }

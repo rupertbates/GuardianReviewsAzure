@@ -1,23 +1,22 @@
-﻿using GuardianReviews.ApplicationServices;
+using GuardianReviews.ApplicationServices;
+using System.Web.Mvc;
+using System.Web.Security;
+using GuardianReviews.Domain.Interfaces;
+using GuardianReviews.Domain.Model;
+using Newtonsoft.Json;
+using SharpArch.Web.NHibernate;
+using SharpArch.Web.JsonNet;
 
-namespace OpenIdRelyingPartyMvc.Controllers
+namespace GuardianReviews.Web.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Security;
-    using DotNetOpenAuth.Messaging;
-    using DotNetOpenAuth.OpenId;
-    using DotNetOpenAuth.OpenId.RelyingParty;
-
     public class UserController : Controller
     {
         private readonly IOpenIdService _openIdService;
+        private readonly IUserRepository _userRepository;
 
-        public UserController(IOpenIdService openIdService)
+        public UserController(IOpenIdService openIdService, IUserRepository userRepository)
         {
+            _userRepository = userRepository;
             _openIdService = openIdService;
         }
 
@@ -47,6 +46,27 @@ namespace OpenIdRelyingPartyMvc.Controllers
         public ActionResult Authenticate(string returnUrl)
         {
             return _openIdService.Authenticate(Request.Form["openid_identifier"], returnUrl);
+        }
+        public ActionResult Settings()
+        {
+            var user = _userRepository.GetUserByEmail(User.Identity.Name);
+            
+            return View(user);
+        }
+        [Transaction]
+        public ActionResult SaveReview(int id)
+        {
+            _userRepository.SaveReviewToList(User.Identity.Name, id);
+            return new EmptyResult();
+        }
+        public ActionResult MyList(HttpResponseTypes format = HttpResponseTypes.Html)
+        {
+            var list = _userRepository.GetUserByEmail(User.Identity.Name).SavedReviews;
+            if(format == HttpResponseTypes.Html)
+                return View(list);
+            var results = JsonConvert.SerializeObject(list);
+            
+            return new JsonNetResult(list);
         }
     }
 }

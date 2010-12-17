@@ -30,5 +30,6 @@ namespace GuardianReviews.Domain.Model
         }
 
         public virtual IList<Review> Reviews { get; private set; }
+        public virtual IList<User> UnsubscribedUsers { get;  set; }
     }
 }

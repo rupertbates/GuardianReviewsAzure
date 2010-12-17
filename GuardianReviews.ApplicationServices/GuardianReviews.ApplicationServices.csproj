@@ -73,9 +73,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugOpenIdService.cs" />
+    <Compile Include="HttpResponseTypes.cs" />
     <Compile Include="IOpenIdService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OpenIdService.cs" />
+    <Compile Include="UrlEnumMatchConstraint.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GuardianReviews.Domain\GuardianReviews.Domain.csproj">

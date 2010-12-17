@@ -1,18 +1,8 @@
-﻿@{
+@{
     View.Title = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Base.cshtml";
 }
-    <link rel="stylesheet" href="/Content/css/openid.css" />
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.js" type="text/javascript"></script>  
-	<script type="text/javascript" src="/Scripts/openid-jquery.js"></script>
-	<script type="text/javascript" src="/Scripts/openid-jquery-en.js"></script>
-	<script type="text/javascript">
-	    $(document).ready(function () {
-	        openid.img_path = '/Content/Images/OpenId/Images/';
-            openid.init('openid_identifier');
-	    });
-	</script>
-
+<link rel="stylesheet" href="/Content/css/openid.css" />
 @if (ViewData["Message"] != null)
 { 
 	<div style="border: solid 1px red">
@@ -41,4 +31,12 @@
 			</noscript>
 	</fieldset>
 </form>
+<script type="text/javascript" src="/Scripts/openid-jquery.js"></script>
+	<script type="text/javascript" src="/Scripts/openid-jquery-en.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        openid.img_path = '/Content/Images/OpenId/Images/';
+	        openid.init('openid_identifier');
+	    });
+	</script>
 <!-- /Simple OpenID Selector -->

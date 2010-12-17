@@ -1,0 +1,7 @@
+﻿@model dynamic
+@using GuardianReviews.Web.Helpers
+<li class="ui-state-default ui-corner-top @MenuHelper.GetMenuTabCss(Html, @Model.TabName)">
+    <span>
+        @Model.Link
+    </span>
+</li>

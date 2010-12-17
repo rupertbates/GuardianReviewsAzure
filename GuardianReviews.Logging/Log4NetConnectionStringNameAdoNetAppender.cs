@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+using System.Configuration;
 using log4net.Core;
 
 namespace log4net.Appender

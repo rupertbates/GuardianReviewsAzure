@@ -11,14 +11,14 @@ using Castle.Windsor;
 using GuardianReviews.Domain.Model;
 using GuardianReviews.NHibernate.Mappings;
 using GuardianReviews.Web.Binders;
-using GuardianReviews.Web.Castle;
 using GuardianReviews.Web.Controllers;
 using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.NHibernate;
+using GuardianReviews.Web.Startup;
 using NHibernate;
 using SharpArch.Data.NHibernate;
 using SharpArch.Web.NHibernate;
-
+using GuardianReviews.ApplicationServices;
 namespace GuardianReviews.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -32,35 +32,16 @@ namespace GuardianReviews.Web
             filters.Add(new HandleErrorAttribute());
         }
 
-        public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-                "Reviews", // Route name
-                "review/{reviewType}", // URL with parameters
-                new { controller = "Review", action = "Index", reviewType = UrlParameter.Optional } // Parameter defaults
-            );
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
-            
-
-
-        }
+        
 
         protected void Application_Start()
         {
             InitializeServiceLocator();
-
             AreaRegistration.RegisterAllAreas();
-
             RegisterGlobalFilters(GlobalFilters.Filters);
-            RegisterRoutes(RouteTable.Routes);
-
+            RouteRegistrar.RegisterRoutes(RouteTable.Routes);
             ModelBinders.Binders.Add(typeof(ReviewTypes), new EnumerationBinder<ReviewTypes>(ReviewTypes.Unknown));
-
+            
         }
         /// <summary>
         /// Instantiate the container and add all Controllers that derive from
@@ -70,14 +51,7 @@ namespace GuardianReviews.Web
         protected virtual void InitializeServiceLocator()
         {
             var container = new WindsorContainer();
-
-            container.Register(AllTypes
-                .FromAssemblyContaining(typeof(ReviewController))
-                .BasedOn<Controller>()
-                .Configure(reg => reg.LifeStyle.Transient));
-            
             ComponentRegistrar.AddComponentsTo(container);
-
             DependencyResolver.SetResolver(new WindsorDependencyResolver(container));
         }
 
@@ -96,8 +70,9 @@ namespace GuardianReviews.Web
         /// </summary>
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            NHibernateInitializer.Instance().InitializeNHibernateOnce(
-                () => InitializeNHibernateSession());
+            NHibernateInitializer
+                .Instance()
+                .InitializeNHibernateOnce(InitializeNHibernateSession);
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,19 +24,19 @@ namespace GuardianReviews.ApplicationServices
 
         public ActionResult Authenticate(string openIdIdentifier, string returnUrl)
         {
-            CheckUser(openIdIdentifier);
-            FormsAuthentication.SetAuthCookie(openIdIdentifier, false);
+            var user = CheckUser(openIdIdentifier);
+            FormsAuthentication.SetAuthCookie(user.Email, false);
 
             if (!string.IsNullOrEmpty(returnUrl))
                 return Redirect(returnUrl);
 
             return RedirectToAction("Index", "Home");
         }
-        public void CheckUser(string openIdIdentifier)
+        public User CheckUser(string openIdIdentifier)
         {
             var user = _repository.FindOne(u => u.ClaimedIdentifier == openIdIdentifier);
             if (user != null)
-                return;
+                return user;
 
             user = new User
                        {
@@ -47,6 +47,7 @@ namespace GuardianReviews.ApplicationServices
                            OpenIdProviderVersion = "1.0"
                        };
             _repository.SaveOrUpdate(user);
+            return user;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ using Shouldly;
 namespace GuardianReviews.Tests.NHibernate
 {
     [TestClass]
-    public class SharpArchTests
+    public class DataIntegrationTests
     {
         private Configuration _configuration;
         [TestInitialize]
@@ -36,6 +36,19 @@ namespace GuardianReviews.Tests.NHibernate
         {
             NHibernateSession.CloseAllSessions();
             NHibernateSession.Reset();
+        }
+        /// <summary>
+        /// Generates and outputs the database schema SQL to the console
+        /// </summary>
+        [TestMethod]
+        public void CanScriptDatabaseSchema()
+        {
+            var session = NHibernateSession.GetDefaultSessionFactory().OpenSession();
+
+            using (TextWriter stringWriter = new StreamWriter("../../../../../../db/schema/UnitTestGeneratedSchema.sql"))
+            {
+                new SchemaExport(_configuration).Execute(true, false, false, session.Connection, stringWriter);
+            }
         }
         /// <summary>
         /// Generates and outputs the database schema SQL to the console
@@ -62,6 +75,7 @@ namespace GuardianReviews.Tests.NHibernate
         {
             var session = NHibernateSession.GetDefaultSessionFactory().OpenSession();
             new SchemaExport(_configuration).Create(false, true);
+            //add the enumerations
             foreach (MusicTypes i in Enumeration.GetAll<MusicTypes>())
             {
                 session.Save(i);
@@ -70,6 +84,11 @@ namespace GuardianReviews.Tests.NHibernate
             {
                 session.Save(i);
             }
+            //add a user
+            var u = new User {ClaimedIdentifier = "test", Email = "rupert.bates@gmail.com"};
+            u.ExcludedReviewTypes.Add(ReviewTypes.Game);
+            session.SaveOrUpdate(u);
+
             //session.Flush();
             var op = new OpenPlatformSearch();
 

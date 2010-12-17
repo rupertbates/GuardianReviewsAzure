@@ -1,4 +1,4 @@
-﻿#I @"D:\Projects\GuardianReviewsAzure\GuardianReviews.Web\bin"
+#I @"D:\Projects\GuardianReviewsAzure\GuardianReviews.Web\bin"
 #r @"GuardianReviews.NHibernate.dll"
 #r @"NHibernate.dll"
 #r @"NHibernate.Linq.dll"

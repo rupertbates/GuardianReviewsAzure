@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace GuardianReviews.Web.Models
 {
-    public class LoginModel
+    public class LoginViewModel
     {
         public string Message { get; set; }
     }

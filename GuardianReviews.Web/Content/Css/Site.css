@@ -23,6 +23,13 @@ margin:0;
 min-height:100%;
 padding:0;
 }
+#page
+{
+    padding:0;
+    float:left;
+    clear:both;
+    background:#FFF;
+}
 a:link
 {
     color: #034af3;
@@ -113,6 +120,7 @@ page width. Or, you can specify an exact pixel width. */
 
 #main
 {
+    padding: 0px 10px;
     clear:both;
 }
 
@@ -215,7 +223,7 @@ table th
 {
     float:left;
     clear:left;
-    margin-top:10px;
+    margin-top:0;
 }
 
 div#title
@@ -313,7 +321,7 @@ ul#review-list
     float:left;
     clear:left;
     max-width:1000px;
-    padding:0 10px;
+    padding:0;
 }
 ul#review-list li
 {

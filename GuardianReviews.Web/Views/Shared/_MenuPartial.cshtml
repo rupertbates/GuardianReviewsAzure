@@ -1,0 +1,19 @@
+﻿@{  
+    Layout = null;  
+} 
+@model IEnumerable<MenuItemViewModel>
+<div id="menucontainer" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul id="menu" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+        @foreach (var item in Model)
+        {
+            <li class="ui-state-default ui-corner-top @item.Css"> 
+                <span>
+                    <a href="@item.Link">@item.DisplayName</a>
+                    
+                </span>
+            </li>
+        }
+    </ul>
+    <div id="content" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+    </div>
+

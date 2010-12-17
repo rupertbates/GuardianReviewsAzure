@@ -1,8 +1,7 @@
-﻿@using GuardianReviews.Domain.Model
+@using GuardianReviews.Domain.Model
 @using GuardianReviews.Domain.BaseClasses
 @model List<Review>
 @{Layout = "~/Views/Shared/_Layout.cshtml";}
+<p>Read reviews from The Guardian and save them to your list of things to see, hear and do</p>
+@Html.Partial("_ReviewList")
 
-<script src="@Url.Content("~/Scripts/jquery.raty.min.js")" type="text/javascript"></script>
-
-<div id="content"></div>
