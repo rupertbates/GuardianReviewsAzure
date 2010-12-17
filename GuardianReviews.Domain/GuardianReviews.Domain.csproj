@@ -76,6 +76,7 @@
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\MusicTypes.cs" />
+    <Compile Include="Model\SavedReview.cs" />
     <Compile Include="Model\ReviewTypes.cs" />
     <Compile Include="Interfaces\IQueryRepository.cs" />
     <Compile Include="Model\MusicReview.cs" />

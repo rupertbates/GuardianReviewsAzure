@@ -23,13 +23,6 @@ margin:0;
 min-height:100%;
 padding:0;
 }
-#page
-{
-    padding:0;
-    float:left;
-    clear:both;
-    background:#FFF;
-}
 a:link
 {
     color: #034af3;
@@ -105,7 +98,7 @@ first child of the left and right table columns */
 page width. Or, you can specify an exact pixel width. */
 .page
 {
-    width: 90%;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -313,17 +306,81 @@ div#title
 {
     width: 6em;
 }
+#page
+{
+    max-width:1000px;   
+    padding:0;
+    float:left;
+    clear:both;
+    background:#FFF;
+}
+#left-column
+{
+    padding:0;
+    margin:0;
+    float:left;
+    clear:none;
+}
+#right-column
+{
+    margin:0;
+    float:left;
+    clear:none;
+}
+/*my list*/
+#my-list
+{
+    font-size:0.75em;
+    
+    margin-top:5px;
+    padding:0;
+    border: solid 1px gray;
+    max-width:200px;
+}
+#my-list h2
+{
+    
+    margin-left:15px;
+}
+#my-list li>img
+{
+    float:left;
+    margin-right:5px;
+}
+#my-list ul
+{
+    padding:0;
+    margin:0;
+    border-top; none;
+}
+#my-list li
+{
+    border: solid 1px #ccc;
+    margin:0px;
+    padding:5px;
+    list-style:none;
+    min-height: 70px;
+}
+#my-list li.even
+{
+    background-color: #edf4cc;
+}
+#my-list li.odd
+{
+    background-color: #fff;
+}
 
 /* Styles for Review list
 ----------------------------------------------------------*/
-ul#review-list
+#review-list ul
 {
     float:left;
     clear:left;
-    max-width:1000px;
+    max-width:666px;
     padding:0;
+    margin:0;
 }
-ul#review-list li
+#review-list li
 {
     display:inline;
     float:left;
@@ -334,31 +391,31 @@ ul#review-list li
     list-style:none;
     border:1px solid gray;
 }
-ul#review-list h3
+#review-list h3
 {
     margin-left: 70px;
 }
-ul#review-list li.Film
+#review-list li.Film
 {
     background: url(/content/images/film.png) no-repeat;
 }
-ul#review-list li.Music
+#review-list li.Music
 {
     background: url(/content/images/music.png) no-repeat;
 }
-ul#review-list li.TvAndRadio
+#review-list ul li.TvAndRadio
 {
     background: url(/content/images/tvandradio.png) no-repeat;
 }
-ul#review-list li.Theatre
+#review-list ul li.Theatre
 {
     background: url(/content/images/theatre.png) no-repeat;
 }
-ul#review-list li.Game
+#review-list ul li.Game
 {
     background: url(/content/images/game.png) no-repeat;
 }
-ul#review-list li.Game
+#review-list ul li.Books
 {
     background: url(/content/images/books.png) no-repeat;
 }

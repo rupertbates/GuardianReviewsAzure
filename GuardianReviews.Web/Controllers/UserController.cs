@@ -6,7 +6,7 @@ using GuardianReviews.Domain.Model;
 using Newtonsoft.Json;
 using SharpArch.Web.NHibernate;
 using SharpArch.Web.JsonNet;
-
+using System.Linq;
 namespace GuardianReviews.Web.Controllers
 {
     public class UserController : Controller
@@ -57,16 +57,20 @@ namespace GuardianReviews.Web.Controllers
         public ActionResult SaveReview(int id)
         {
             _userRepository.SaveReviewToList(User.Identity.Name, id);
-            return new EmptyResult();
+            return new RedirectResult(Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : "/");
         }
         public ActionResult MyList(HttpResponseTypes format = HttpResponseTypes.Html)
         {
+            if (!User.Identity.IsAuthenticated)
+                return new EmptyResult();
+
             var list = _userRepository.GetUserByEmail(User.Identity.Name).SavedReviews;
+            
             if(format == HttpResponseTypes.Html)
-                return View(list);
-            var results = JsonConvert.SerializeObject(list);
+                return View(list.ToArray());
             
             return new JsonNetResult(list);
         }
+        
     }
 }

@@ -113,7 +113,6 @@
     <Compile Include="Mappings\Conventions\PrimaryKeyConvention.cs" />
     <Compile Include="Mappings\Conventions\ReferenceConvention.cs" />
     <Compile Include="Mappings\Conventions\TableNameConvention.cs" />
-    <Compile Include="Mappings\JoinTables\UsersToReviewTypes.cs" />
     <Compile Include="Mappings\JoinTables\MusicReviewsToMusicTypes.cs">
       <SubType>Code</SubType>
     </Compile>

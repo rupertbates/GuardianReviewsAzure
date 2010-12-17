@@ -12,8 +12,16 @@ namespace GuardianReviews.NHibernate.Mappings
     {
         public void Override(AutoMapping<User> mapping)
         {
-            mapping.HasManyToMany(u => u.SavedReviews).AsSet();
-            
+            mapping
+                .HasMany(u => u.SavedReviews)
+                //.AsSet()
+                //.Table("UserListItems")
+                .Cascade.All();
+            mapping
+                .HasManyToMany(u => u.ExcludedReviewTypes)
+                //.AsSet()
+                .Table("UserExcludedReviewTypes")
+                .Cascade.All();
         }
     }
 }

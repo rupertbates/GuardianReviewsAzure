@@ -2,6 +2,14 @@
     View.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>View</h2>
+@model Review
+<h2>@Model.Title.Html()</h2>
+<em>@Model.PublicationDate.ToLongDateString()</em>
+<p>@Model.TrailText.Html()</p>
+<p>@Model.Body.Html()</p>
+<div class="star-rating-@Model.StarRating"></div>
+@if (User.Identity.IsAuthenticated)
+{
+    <a href='/user/saveReview/@Model.Id' >Save to my list</a>
+}
 

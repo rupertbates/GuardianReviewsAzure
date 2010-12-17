@@ -1,21 +1,23 @@
 ﻿@model List<Review>
 @*<script src="@Url.Content("~/Scripts/jquery-1.4.1-vsdoc.js")" type="text/javascript"></script>*@
-<ul id="review-list">
-@foreach (var review in Model)
-{
-     <li class="@review.ReviewType.Name">
-         <h3>@review.Title.Html()</h3>
-         <em>@review.PublicationDate.ToLongDateString()</em>
-         <p>@review.TrailText.Html()</p>
-         <div class="star-rating-@review.StarRating"></div>
-         @if (User.Identity.IsAuthenticated)
-         {
-             <a href='/user/saveReview/@review.Id' onclick="saveToList(@review.Id);return false;" >Save to my list</a>
-         }
-         <a href='/review/view/@review.Id' id="readReviewLink" >Read the whole review...</a>
-     </li>   
-}
+<div id="review-list">
+<ul>
+    @foreach (var review in Model)
+    {
+        <li class="@review.ReviewType.Name">
+            <h3>@review.Title.Html()</h3>
+            <em>@review.PublicationDate.ToLongDateString()</em>
+            <p>@review.TrailText.Html()</p>
+            <div class="star-rating-@review.StarRating"></div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href='/user/saveReview/@review.Id' >Save to my list</a>
+            }<br />
+            <a href='/review/view/@review.Id' id="readReviewLink" >Read the whole review...</a>
+        </li>   
+    }
 </ul>
+</div>
 <script src="@Url.Content("~/Scripts/jquery.raty.min.js")" type="text/javascript"></script>
 <script type="text/javascript">
     for (var i = 1; i < 6; i++) {
