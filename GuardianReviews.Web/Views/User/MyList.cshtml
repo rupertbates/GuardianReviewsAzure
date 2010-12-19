@@ -12,6 +12,7 @@
          <li @(i % 2 == 0 ? "class=even" : "class=odd") >
          <img src="/content/images/@(review.Review.ReviewType.Name).png" />
              <strong>@review.Review.Title.Html()</strong>
+             <a class="remove-button" href="/user/RemoveReview/@review.Id"><img src="/Content/images/close.jpg" title="Remove review from my list" alt="Remove @review.Review.Title.Html() from my list" /></a>
          </li>   
     }
     </ul>

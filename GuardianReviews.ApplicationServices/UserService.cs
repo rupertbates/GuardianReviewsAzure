@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web;
 using System.Web.Mvc;
 using GuardianReviews.Domain.Interfaces;
 using GuardianReviews.Domain.Model;
@@ -19,9 +20,9 @@ namespace GuardianReviews.ApplicationServices
 
         public User GetCurrentUser()
         {
-            if ( User == null)
+            if ( HttpContext.Current.User == null || !HttpContext.Current.User.Identity.IsAuthenticated)
                 return null;
-            return _repository.GetUserByEmail(User.Identity.Name);
+            return _repository.GetUserByEmail( HttpContext.Current.User.Identity.Name);
         }
     }
 }

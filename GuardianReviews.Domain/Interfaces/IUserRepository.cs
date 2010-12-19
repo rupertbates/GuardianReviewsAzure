@@ -10,5 +10,6 @@ namespace GuardianReviews.Domain.Interfaces
     {
         User GetUserByEmail(string email);
         void SaveReviewToList(string userEmail, int reviewId);
+        void RemoveReviewFromList(string userEmail, int reviewId);
     }
 }

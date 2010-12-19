@@ -49,9 +49,17 @@ namespace GuardianReviews.Web.Controllers
         }
         public ActionResult Settings()
         {
-            var user = _userRepository.GetUserByEmail(User.Identity.Name);
+            var user = GetUser();
             
             return View(user);
+        }
+        [Transaction]
+        public ActionResult ExcludeReviewType(ReviewTypes id)
+        {
+            var user = GetUser();
+            if(user != null)
+                user.UnsubscribeFrom(id);
+            return new RedirectResult(Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : "/");
         }
         [Transaction]
         public ActionResult SaveReview(int id)
@@ -59,18 +67,31 @@ namespace GuardianReviews.Web.Controllers
             _userRepository.SaveReviewToList(User.Identity.Name, id);
             return new RedirectResult(Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : "/");
         }
+        [Transaction]
+        public ActionResult RemoveReview(int id)
+        {
+            _userRepository.RemoveReviewFromList(User.Identity.Name, id);
+            return new RedirectResult(Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : "/");
+        }
         public ActionResult MyList(HttpResponseTypes format = HttpResponseTypes.Html)
         {
-            if (!User.Identity.IsAuthenticated)
+            var user = GetUser();
+            if (user == null)
                 return new EmptyResult();
-
-            var list = _userRepository.GetUserByEmail(User.Identity.Name).SavedReviews;
             
             if(format == HttpResponseTypes.Html)
-                return View(list.ToArray());
+                return View(user.SavedReviews.OrderByDescending(r =>r.DateAdded).ToArray());
             
-            return new JsonNetResult(list);
+            return new JsonNetResult(user.SavedReviews);
         }
-        
+
+        private User GetUser()
+        {
+            if (!User.Identity.IsAuthenticated)
+                return null;
+            return _userRepository.GetUserByEmail(User.Identity.Name);
+
+        }
+
     }
 }

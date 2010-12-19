@@ -39,6 +39,7 @@ namespace GuardianReviews.OpenPlatform.ContentConverters
             review.TrailText = content.Fields.TrailText;
             review.Title = content.WebTitle;
             review.WebUrl = content.WebUrl;
+            review.Thumbnail = content.Fields.Thumbnail;
         }
     }
 }

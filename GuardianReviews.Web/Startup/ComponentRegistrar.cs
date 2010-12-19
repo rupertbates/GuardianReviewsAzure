@@ -37,7 +37,7 @@ namespace GuardianReviews.Web.Startup
         private static void AddApplicationServicesTo(IWindsorContainer container)
         {
             container.AddComponent("OpenId", typeof(IOpenIdService), typeof(DebugOpenIdService));
-            //container.AddComponent("Users", typeof(IUserService), typeof(UserService));
+            container.AddComponent("Users", typeof(IUserService), typeof(UserService));
             //container.Register(
             //    AllTypes.Pick()
             //    .FromAssembly(typeof(OpenIdService).Assembly)

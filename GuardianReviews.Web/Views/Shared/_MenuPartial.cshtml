@@ -8,7 +8,11 @@
         {
             <li class="ui-state-default ui-corner-top @item.Css"> 
                 <span>
-                    <a href="@item.Link">@item.DisplayName</a>
+                    <a href="@item.Link">@item.DisplayName</a> 
+                    @if (item.Closeable)
+                    { 
+                        <a class="no-padding" href="/user/ExcludeReviewType/@item.Name"><img src="/Content/images/close.jpg" title="Close this tab" alt="Close the @item.DisplayName tab" /></a>
+                    }
                     
                 </span>
             </li>

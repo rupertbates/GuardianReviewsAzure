@@ -4,7 +4,8 @@
 <ul>
     @foreach (var review in Model)
     {
-        <li class="@review.ReviewType.Name">
+        <li>
+            <img src="@(review.Thumbnail != null ? review.Thumbnail : "Content/Images/" + review.ReviewType.Name + ".png")" />
             <h3>@review.Title.Html()</h3>
             <em>@review.PublicationDate.ToLongDateString()</em>
             <p>@review.TrailText.Html()</p>

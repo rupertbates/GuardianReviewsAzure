@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 //using Iesi.Collections.Generic;
 //using Iesi.Collections.Generic;
+using SharpArch.Core;
 using SharpArch.Core.DomainModel;
 
 namespace GuardianReviews.Domain.Model
@@ -27,11 +28,22 @@ namespace GuardianReviews.Domain.Model
         public virtual ICollection<ReviewTypes> ExcludedReviewTypes { get; protected set; }
         public virtual bool IsSubscribedTo(ReviewTypes reviewType)
         {
-            return !ExcludedReviewTypes.Contains(reviewType);
+            if (reviewType == ReviewTypes.Unknown)
+                return false;
+            return !ExcludedReviewTypes.Any(r => r.Id == reviewType.Id);
         }
         public virtual void SaveReviewToList(Review review)
         {
             SavedReviews.Add(new SavedReview {Review = review, DateAdded = DateTime.Now});
+        }
+        public virtual void RemoveReviewFromList(SavedReview review)
+        {
+            //Check.Ensure(SavedReviews.Contains(review), "Tried to remove a rev");
+            SavedReviews.Remove(review);
+        }
+        public virtual void UnsubscribeFrom(ReviewTypes reviewType)
+        {
+            ExcludedReviewTypes.Add(reviewType);
         }
         
     }

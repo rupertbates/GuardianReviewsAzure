@@ -14,12 +14,12 @@ namespace GuardianReviews.NHibernate.Mappings
         {
             mapping
                 .HasMany(u => u.SavedReviews)
-                //.AsSet()
+                .AsSet()
                 //.Table("UserListItems")
                 .Cascade.All();
             mapping
                 .HasManyToMany(u => u.ExcludedReviewTypes)
-                //.AsSet()
+                .AsSet()
                 .Table("UserExcludedReviewTypes")
                 .Cascade.All();
         }

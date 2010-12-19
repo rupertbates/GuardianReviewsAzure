@@ -10,9 +10,11 @@ namespace GuardianReviews.NHibernate.Repositories
     public class UserRepository : QueryRepository<User>,  IUserRepository
     {
         private readonly IQueryRepository<Review> _reviewRepository;
+        private readonly IQueryRepository<SavedReview> _savedReviewRepository;
 
-        public UserRepository(IQueryRepository<Review> reviewRepository)
+        public UserRepository(IQueryRepository<Review> reviewRepository, IQueryRepository<SavedReview> savedReviewRepository)
         {
+            _savedReviewRepository = savedReviewRepository;
             _reviewRepository = reviewRepository;
         }
 
@@ -29,5 +31,12 @@ namespace GuardianReviews.NHibernate.Repositories
             SaveOrUpdate(user);
         }
 
+        public void RemoveReviewFromList(string userEmail, int savedReviewId)
+        {
+            var user = GetUserByEmail(userEmail);
+            var review = _savedReviewRepository.Get(savedReviewId);
+            user.RemoveReviewFromList(review);
+            SaveOrUpdate(user);
+        }
     }
 }

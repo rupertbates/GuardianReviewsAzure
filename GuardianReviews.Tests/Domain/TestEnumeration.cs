@@ -21,5 +21,16 @@ namespace GuardianReviews.Tests.Domain
             (null == null).ShouldBe(true);
             
         }
+        [TestMethod]
+        public void Contains_works_correctly()
+        {
+            var reviews = new HashSet<ReviewTypes> {ReviewTypes.Books, ReviewTypes.Film};
+            reviews.Contains(ReviewTypes.Books).ShouldBe(true);
+            reviews.Contains(ReviewTypes.Music).ShouldBe(false);
+            var user = new User();
+            user.UnsubscribeFrom(ReviewTypes.Books);
+            user.IsSubscribedTo(ReviewTypes.Books).ShouldBe(false);
+
+        }
     }
 }

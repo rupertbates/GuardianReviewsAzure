@@ -11,7 +11,7 @@ namespace GuardianReviews.Domain.Model
             Music = new ReviewTypes(2, "Music"),
             Books = new ReviewTypes(3, "Books"),
             Theatre = new ReviewTypes(4, "Theatre"),
-            Game = new ReviewTypes(5, "Game"),
+            Game = new ReviewTypes(5, "Games"),
             TvAndRadio = new ReviewTypes(6, "TvAndRadio", "Television & Radio"),
             Unknown = new ReviewTypes(7, "Unknown", "Unknown", false);
         

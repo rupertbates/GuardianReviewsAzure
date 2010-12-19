@@ -26,12 +26,12 @@ namespace GuardianReviews.Web.Controllers
         {
             var user = _userRepository.GetUserByEmail(User.Identity.Name);
             
-            var home = new MenuItemViewModel { DisplayName = "Home", Css = GetCss("Home"), Link = "/" };
+            var home = new MenuItemViewModel { DisplayName = "Home", Css = GetCss("Home"), Closeable=false, Link = "/" };
             
             var items = new[] { home }.Concat(GetReviewMenuItems(user));
 
             if (user != null)
-                items = items.Concat(new[]{new MenuItemViewModel { DisplayName = "Settings", Css = GetCss("Settings"), Link = "/user/settings" }});
+                items = items.Concat(new[]{new MenuItemViewModel { DisplayName = "Settings", Css = GetCss("Settings"), Closeable=false, Link = "/user/settings" }});
             
             return View("_MenuPartial", items);
         }
@@ -42,15 +42,17 @@ namespace GuardianReviews.Web.Controllers
             if (user != null)
                 items = items.Where(user.IsSubscribedTo);
             
-            return items.Select(MenuItemFromReviewType).ToList();
+            return items.Select(i => MenuItemFromReviewType(i, user != null)).ToList();
         }
-        private MenuItemViewModel MenuItemFromReviewType(ReviewTypes reviewType)
+        private MenuItemViewModel MenuItemFromReviewType(ReviewTypes reviewType, bool closeable)
         {
             return new MenuItemViewModel
                        {
                            DisplayName = reviewType.DisplayName,
+                           Name = reviewType.Name,
                            Link = Url.Action("Index", "Review", new {reviewType = reviewType.Name}),
-                           Css = GetCss(reviewType.Name)
+                           Css = GetCss(reviewType.Name),
+                           Closeable = closeable
                        };
         }
         private string GetCss(string displayName)

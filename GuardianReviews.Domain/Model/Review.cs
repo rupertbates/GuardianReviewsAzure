@@ -24,5 +24,6 @@ namespace GuardianReviews.Domain.Model
         public virtual ReviewTypes ReviewType { get; protected set; }
         public virtual int? StarRating { get; set; }
         public virtual string WebUrl { get; set; }
+        public virtual string Thumbnail { get; set; }
     }
 }
