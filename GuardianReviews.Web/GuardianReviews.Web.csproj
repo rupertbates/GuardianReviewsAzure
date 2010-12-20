@@ -213,8 +213,9 @@
     <Content Include="Content\Css\ui-lightness\jquery-ui-1.8.6.custom.css" />
     <Content Include="Content\Images\body_bg.jpg" />
     <Content Include="Content\Images\books.png" />
+    <Content Include="Content\Images\Close.jpg" />
     <Content Include="Content\Images\film.png" />
-    <Content Include="Content\Images\game.png" />
+    <Content Include="Content\Images\games.png" />
     <Content Include="Content\Images\html_bg.png" />
     <Content Include="Content\Images\Logo.gif" />
     <Content Include="Content\Images\Logo.png" />

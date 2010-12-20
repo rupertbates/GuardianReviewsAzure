@@ -105,6 +105,7 @@ page width. Or, you can specify an exact pixel width. */
 
 #header
 {
+    max-width:800px;
     position: relative;
     margin-bottom: 0px;
     color: #000;
@@ -228,11 +229,13 @@ div#title
 
 #logindisplay
 {
+    float:right;
     font-size:1.1em;
     display:block;
     text-align:right;
     margin:10px;
     color:White;
+    max-width:600px;
 }
 
 #logindisplay a:link
@@ -322,6 +325,7 @@ div#title
 }
 #right-column
 {
+    max-width:300px;
     margin-left:10px;
     float:left;
     clear:none;
@@ -332,7 +336,7 @@ div#title
 }
 #menu img
 {
-    margin:7px 5px 0px 0px;
+    margin:7px 5px 0px 5px;
 }
 
 /*my list*/
@@ -381,6 +385,7 @@ div#title
 #my-list a.remove-button
 {
     float:right;
+    margin-left:5px;
 }
 
 /* Styles for Review list

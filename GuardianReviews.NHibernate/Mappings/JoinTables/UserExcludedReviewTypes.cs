@@ -8,7 +8,7 @@ namespace GuardianReviews.Domain.Model
     /// <summary>
     /// This class is just here to get an Id primary key on the join table
     /// </summary>
-    public class MusicReviewsToMusicTypes
+    public class UserExcludedReviewTypes 
     {
         public virtual int Id { get; set; }
     }

@@ -17,11 +17,11 @@ namespace GuardianReviews.NHibernate.Mappings
                 .AsSet()
                 //.Table("UserListItems")
                 .Cascade.All();
-            mapping
-                .HasManyToMany(u => u.ExcludedReviewTypes)
-                .AsSet()
-                .Table("UserExcludedReviewTypes")
-                .Cascade.All();
+            //mapping
+            //    .HasMany(u => u.ExcludedReviewTypes).
+            //    .AsSet()
+            //    .Table("UserExcludedReviewTypes")
+            //    .Cascade.All();
         }
     }
 }

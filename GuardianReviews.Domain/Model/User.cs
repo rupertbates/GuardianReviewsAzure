@@ -14,7 +14,7 @@ namespace GuardianReviews.Domain.Model
         public User()
         {
             
-            ExcludedReviewTypes = new HashSet<ReviewTypes>();
+            ExcludedReviewTypes = new List<ReviewTypes>();
             SavedReviews = new HashSet<SavedReview> ();
         }
         public virtual string ClaimedIdentifier { get; set; }
@@ -25,7 +25,7 @@ namespace GuardianReviews.Domain.Model
         public virtual string OpenIdProvider { get; set; }
         public virtual string OpenIdProviderVersion { get; set; }
         public virtual ICollection<SavedReview> SavedReviews { get; protected set; }
-        public virtual ICollection<ReviewTypes> ExcludedReviewTypes { get; protected set; }
+        public virtual IList<ReviewTypes> ExcludedReviewTypes { get; protected set; }
         public virtual bool IsSubscribedTo(ReviewTypes reviewType)
         {
             if (reviewType == ReviewTypes.Unknown)

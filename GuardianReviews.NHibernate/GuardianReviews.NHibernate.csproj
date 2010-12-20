@@ -116,6 +116,9 @@
     <Compile Include="Mappings\JoinTables\MusicReviewsToMusicTypes.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Mappings\JoinTables\UserExcludedReviewTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Mappings\LogOverride.cs" />
     <Compile Include="Mappings\ReviewOverride.cs" />
     <Compile Include="Mappings\UserOverride.cs" />
