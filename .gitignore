@@ -8,6 +8,10 @@
 *.dll.config
 *.cache
 
+# connection strings #
+######################
+ConnectionStrings.config
+
 # Include dlls if they're in the binaries or NuGet packages directory
 !/Binaries/*.dll
 !/Binaries/*/*.dll

@@ -171,12 +171,12 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Just_here_to_enable_browsing.aspx.cs">
+      <DependentUpon>Just_here_to_enable_browsing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Just_here_to_enable_browsing.aspx.designer.cs">
+      <DependentUpon>Just_here_to_enable_browsing.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -307,7 +307,8 @@
     <Content Include="Web.Stage.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Just_here_to_enable_browsing.aspx" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="Views\Home\xrds.cshtml" />
     <Content Include="Scripts\openid-jquery-en.js" />
     <Content Include="Scripts\openid-jquery.js" />
